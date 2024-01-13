@@ -37,6 +37,11 @@
         </dependency>
 
         <!-- Graphical library -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>13.0.2</version>
+        </dependency>
     </dependencies>
 
     <build>

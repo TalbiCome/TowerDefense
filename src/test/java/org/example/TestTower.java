@@ -14,20 +14,28 @@ public class TestTower {
         t1.assignNewTarget(enemy);
         t2.assignNewTarget(enemy);
 
+        int deathTime = -1;
         for(int i = 0; i < 20; i++)
         {
             enemy.updateStatus();
+            if(enemy.isDead && deathTime == -1)
+            {
+                deathTime = i;
+            }
             t1.updateStatus();
             t2.updateStatus();
         }
 
-        //On verifie que l'enemie est mort est c'est  arreté
+        //We verify that the enemy is dead and as stopped at the right time
         assertTrue(enemy.isDead);
         assertTrue(enemy.HP < 1);
-        assertEquals(4, enemy.position.x);
+        assertEquals(deathTime*enemy.speed, enemy.position.x);
 
-        //on verifie si les tourelles continue de recharger même si elle n'ont plus de target
+        //We verify that tower keep reloading even if enemy is dead
         assertEquals(0, t1.reloadTimer);
         assertEquals(0, t2.reloadTimer);
+
+        //We verify that assigning a dead enemy to a tower is not possible
+        assertThrows(IllegalArgumentException.class, () -> t1.assignNewTarget(enemy));
     }
 }

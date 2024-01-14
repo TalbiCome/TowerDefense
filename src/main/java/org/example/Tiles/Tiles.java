@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Tiles;
 
 public class Tiles {
 

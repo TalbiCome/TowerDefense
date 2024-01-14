@@ -1,6 +1,5 @@
-package org.example;
+package org.example.Tiles;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 public class Grid {

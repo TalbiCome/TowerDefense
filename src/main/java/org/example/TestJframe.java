@@ -22,7 +22,7 @@ public class TestJframe extends JFrame{
         jpanel = new TestJPanel();
         add(jpanel);
 
-        timePerFrame = 1000000000.0 / 60.0; // 1 000 000 000 can change FPS for the game
+        timePerFrame = 1000000000.0 / 30.0; // 1 000 000 000 can change FPS for the game
 
         setVisible(true);
     }

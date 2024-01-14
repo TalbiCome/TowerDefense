@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.Tiles.*;
 
 import javax.swing.JPanel;
 import java.awt.*;
@@ -13,6 +14,8 @@ public class GameView extends JPanel{
     private int frames;
     private Grid grid;
     private Level level;
+
+
 
 
 
@@ -66,6 +69,10 @@ public class GameView extends JPanel{
                 color = new Color(0,0,0);
         }
         return color;
+    }
+
+    public Grid getGrid() {
+        return grid;
     }
 
     public static void main(String[] args){

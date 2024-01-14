@@ -35,6 +35,7 @@ public class TestJPanel extends JPanel {
 
         FPSCounter();
 
+
     }
 
     private void FPSCounter(){

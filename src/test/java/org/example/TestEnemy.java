@@ -126,8 +126,6 @@ public class TestEnemy {
             {
                 assertEquals(fastEnemy1.position.y, 50);
             }
-
-            System.out.println("fast :" + fastEnemy1.position.x + ", " + fastEnemy1.position.y);
         }
 
         for(int i = 1; fastEnemy1.position.x < 50; i++)
@@ -142,8 +140,28 @@ public class TestEnemy {
             {
                 assertEquals(fastEnemy1.position.x, 50);
             }
+        }
+    }
 
-            System.out.println("fast :" + fastEnemy1.position.x + ", " + fastEnemy1.position.y);
+    @Test
+    void movingFlyingTest() {
+        Pos pos1 = new Pos(0, 0);
+        Pos pos2 = new Pos(0, 50);
+        Pos pos3 = new Pos(50, 50);
+        Pos pos4 = new Pos(50, 0);
+        Pos[] posArray = {pos1, pos2, pos3, pos4};
+        Strategy strategy = new FlyingStrategy();
+
+        Enemy fastEnemy1 = new FastEnemy(posArray, strategy);
+        int expectedValue = 0;
+        for (int i = 1; !fastEnemy1.isAtEnd; i++) {
+            expectedValue = i * fastEnemy1.speed;
+            fastEnemy1.moveToNextPos();
+            if (expectedValue < 50) {
+                assertEquals(fastEnemy1.position.x, expectedValue);
+            } else {
+                assertEquals(fastEnemy1.position.x, 50);
+            }
         }
     }
 }

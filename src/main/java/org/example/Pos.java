@@ -1,0 +1,95 @@
+package org.example;
+
+public class Pos {
+    /*** x-axis value of the position*/
+    int x;
+    /*** y-axis value of the position*/
+    int y;
+    /*** maxBound corresponding to the screen size in pixels*/
+    static final int maxBoundX = 1920;
+    /*** maxBound corresponding to the screen size in pixels*/
+    static final int maxBoundY = 1080;
+    /*** minBound corresponding to the screen size in pixels*/
+    static final int minBoundX = 0;
+    /*** minBound corresponding to the screen size in pixels*/
+    static final int minBoundY = 0;
+
+    public Pos(int x, int y)
+    {
+        if(x > maxBoundX || x < minBoundX || y > maxBoundY || y < minBoundY) { //avoid position out of screen
+            throw new IllegalArgumentException("a position can only be created if in the frame boundaries");
+        }
+
+        this.x = x;
+        this.y = y;
+    }
+
+    public Pos(Pos pos)
+    {
+        this.x = pos.x;
+        this.y = pos.y;
+    }
+
+    /**
+     * is x value out of bound
+     * @return true if yes, else return false
+     */
+    protected boolean isPosOutOfBoundX(int val)
+    {
+        return val > maxBoundX || val  < 0;
+    }
+
+    /**
+     * is y value out of bound
+     * @return true if yes, else return false
+     */
+    protected boolean isPosOutOfBoundY(int val)
+    {
+        return val > maxBoundY || val < 0;
+    }
+
+    /**
+     * Move the actual position by adding the value in parameters to each axis. If the value exceed
+     * the max/min bound the set the value on the according bound
+     * @param xMovement will be added to the actual x-axis position
+     * @param yMovement will be added to the actual y-axis position
+     */
+    public void moveTo(Pos target, int moveDistance)
+    {
+        if(isPosOutOfBoundX(target.x) || isPosOutOfBoundY(target.y))
+        {
+            throw new IllegalArgumentException("Target to move to is not in screen boundary");
+        }
+
+        int distXFromTarget = target.x - x;
+        int distYFromTarget = target.y - y;
+
+        if(distXFromTarget != 0)
+        {
+            if(distXFromTarget < moveDistance) //Si la cible est dans la porté de deplacement, on s'arrete dessus
+            {
+                x = target.x;
+            }
+            else
+            {
+                x = x + moveDistance;
+            }
+        } else if (distYFromTarget != 0)        //Si la cible est dans la porté de deplacement, on s'arrete dessus
+        {
+            if(distYFromTarget < moveDistance)
+            {
+                y = target.y;
+            }
+            else
+            {
+                y = y + moveDistance;
+            }
+        }
+    }
+
+    public static boolean arePosesEquals(Pos pos1, Pos pos2)
+    {
+        return pos1.x == pos2.x && pos1.y == pos2.y;
+    }
+
+}

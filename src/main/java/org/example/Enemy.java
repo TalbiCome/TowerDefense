@@ -37,7 +37,7 @@ public abstract class Enemy extends Elements {
 
     protected boolean isAtEndPos()
     {
-        return true;
+        return isAtEnd || trailStack.isEmpty();
     }
 
     public void applyDamageToSelf(int HPToRemove) {
@@ -59,7 +59,19 @@ public abstract class Enemy extends Elements {
 
     public void updateStatus()
     {
-
+        if(HP < 1)
+        {
+            isDead = true;
+        }
+        else if (isAtEndPos())
+        {
+            isAtEnd = true;
+            isDead = true;
+        }
+        else
+        {
+            moveToNextPos();
+        }
     }
 
 

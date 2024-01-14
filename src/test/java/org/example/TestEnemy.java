@@ -39,9 +39,9 @@ public class TestEnemy {
         assertFalse(slowEnemy2.isDead);
 
         //verifying HP amount of alive enemy
-        assertEquals(fastEnemy2.HP, 1);
-        assertEquals(normalEnemy2.HP, 1);
-        assertEquals(slowEnemy2.HP, 1);
+        assertEquals(1, fastEnemy2.HP);
+        assertEquals(1, normalEnemy2.HP);
+        assertEquals(1, slowEnemy2.HP);
 
         //verifying that an already dead enemy don't take anymore damage
         int before = slowEnemy1.HP;
@@ -120,11 +120,11 @@ public class TestEnemy {
             fastEnemy1.moveToNextPos();
             if(expectedValue < 50)
             {
-                assertEquals(fastEnemy1.position.y, expectedValue);
+                assertEquals(expectedValue, fastEnemy1.position.y);
             }
             else
             {
-                assertEquals(fastEnemy1.position.y, 50);
+                assertEquals(50, fastEnemy1.position.y);
             }
         }
 
@@ -134,11 +134,11 @@ public class TestEnemy {
             fastEnemy1.moveToNextPos();
             if(expectedValue < 50)
             {
-                assertEquals(fastEnemy1.position.x, expectedValue);
+                assertEquals(expectedValue, fastEnemy1.position.x);
             }
             else
             {
-                assertEquals(fastEnemy1.position.x, 50);
+                assertEquals(50, fastEnemy1.position.x);
             }
         }
     }
@@ -158,10 +158,42 @@ public class TestEnemy {
             expectedValue = i * fastEnemy1.speed;
             fastEnemy1.moveToNextPos();
             if (expectedValue < 50) {
-                assertEquals(fastEnemy1.position.x, expectedValue);
+                assertEquals(expectedValue, fastEnemy1.position.x);
             } else {
-                assertEquals(fastEnemy1.position.x, 50);
+                assertEquals(50, fastEnemy1.position.x);
             }
         }
+    }
+
+    @Test
+    void enemyUpdate()
+    {
+        Pos pos1 = new Pos(0, 0);
+        Pos pos2 = new Pos(0, 50);
+        Pos[] posArray = {pos1, pos2};
+        Strategy strategy = new FlyingStrategy();
+
+        Enemy fastEnemy1 = new FastEnemy(posArray, strategy);
+        Enemy normalEnemy1 = new NormalEnemy(posArray, strategy);
+
+        for(int i = 0; i < 10; i++)
+        {
+            fastEnemy1.updateStatus();
+            normalEnemy1.updateStatus();
+        }
+
+        for(int i = 0; i < 10; i++)
+        {
+            fastEnemy1.updateStatus();
+            normalEnemy1.applyDamageToSelf(1);
+            normalEnemy1.updateStatus();
+
+        }
+
+        assertTrue(fastEnemy1.isAtEnd);
+        assertFalse(normalEnemy1.isAtEnd);
+        assertTrue(normalEnemy1.isDead);
+        assertEquals(50, fastEnemy1.position.y);
+        assertEquals(22, normalEnemy1.position.y);
     }
 }

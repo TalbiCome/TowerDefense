@@ -14,22 +14,38 @@ public class Pos {
     /*** minBound corresponding to the screen size in pixels*/
     static final int minBoundY = 0;
 
+    public Pos(int x, int y)
+    {
+        if(x > maxBoundX || x < minBoundX || y > maxBoundY || y < minBoundY) { //avoid position out of screen
+            throw new IllegalArgumentException("a position can only be created if in the frame boundaries");
+        }
+
+        this.x = x;
+        this.y = y;
+    }
+
+    public Pos(Pos pos)
+    {
+        this.x = pos.x;
+        this.y = pos.y;
+    }
+
     /**
      * is x value out of bound
      * @return true if yes, else return false
      */
-    protected boolean isPosOutOfBoundX()
+    protected boolean isPosOutOfBoundX(int val)
     {
-        return x > maxBoundX || x  < 0;
+        return val > maxBoundX || val  < 0;
     }
 
     /**
      * is y value out of bound
      * @return true if yes, else return false
      */
-    protected boolean isPosOutOfBoundY()
+    protected boolean isPosOutOfBoundY(int val)
     {
-        return y > maxBoundY || y < 0;
+        return val > maxBoundY || val < 0;
     }
 
     /**
@@ -38,18 +54,42 @@ public class Pos {
      * @param xMovement will be added to the actual x-axis position
      * @param yMovement will be added to the actual y-axis position
      */
-    public void move(int xMovement, int yMovement)
+    public void moveTo(Pos target, int moveDistance)
     {
-        x += xMovement;
-        y += yMovement;
-        if(isPosOutOfBoundX())
+        if(isPosOutOfBoundX(target.x) || isPosOutOfBoundY(target.y))
         {
-            x = x < 0 ?  minBoundX :  maxBoundX;    //x out of bound because x < 0 if yes then x = lower bound
+            throw new IllegalArgumentException("Target to move to is not in screen boundary");
         }
-        if(isPosOutOfBoundY())
+
+        int distXFromTarget = target.x - x;
+        int distYFromTarget = target.y - y;
+
+        if(distXFromTarget != 0)
         {
-            y = y < 0 ?  minBoundY :  maxBoundY;    //y out of bound because y < 0 if yes then y = lower bound
+            if(distXFromTarget < moveDistance) //Si la cible est dans la porté de deplacement, on s'arrete dessus
+            {
+                x = target.x;
+            }
+            else
+            {
+                x = x + moveDistance;
+            }
+        } else if (distYFromTarget != 0)        //Si la cible est dans la porté de deplacement, on s'arrete dessus
+        {
+            if(distYFromTarget < moveDistance)
+            {
+                y = target.y;
+            }
+            else
+            {
+                y = y + moveDistance;
+            }
         }
+    }
+
+    public static boolean arePosesEquals(Pos pos1, Pos pos2)
+    {
+        return pos1.x == pos2.x && pos1.y == pos2.y;
     }
 
 }

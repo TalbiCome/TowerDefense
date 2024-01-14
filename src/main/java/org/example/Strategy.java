@@ -1,5 +1,5 @@
 package org.example;
 
 public interface Strategy {
-    void updateStatus();
+    public void moveToNextPos(Enemy enemy);
 }

@@ -25,6 +25,19 @@ public class ElementsFactory {
         };
     }
 
+    public Enemy createEnemy(int type, Pos[] posArray)
+    {
+        return switch (type) {
+            case 1 -> new SlowEnemy(posArray, new WalkingStrategy());
+            case 2 -> new NormalEnemy(posArray, new WalkingStrategy());
+            case 3 -> new FastEnemy(posArray, new WalkingStrategy());
+            case 4 -> new SlowEnemy(posArray, new FlyingStrategy());
+            case 5 -> new NormalEnemy(posArray, new FlyingStrategy());
+            case 6 -> new FastEnemy(posArray, new FlyingStrategy());
+            default -> throw new IllegalArgumentException("invalid int, not corresponding to an enemy type");
+        };
+    }
+
     public Tower createTower(Pos pos)
     {
         return new Tower(pos);

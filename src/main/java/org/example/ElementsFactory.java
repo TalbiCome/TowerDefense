@@ -3,6 +3,8 @@ package org.example;
 public class ElementsFactory {
     private static ElementsFactory instance = null;
 
+    protected ElementsFactory(){};
+
     public static ElementsFactory getInstance()
     {
         if(instance == null)

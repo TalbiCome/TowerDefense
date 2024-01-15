@@ -54,8 +54,6 @@ public class Tower extends Elements{
                 reloadTimer -= 1;
             }
         }
-
-
     }
 
     public void assignNewTarget(Enemy newTarget)
@@ -66,8 +64,6 @@ public class Tower extends Elements{
         }
 
         target = newTarget;
-
-
     }
 
     public void updateStatus()

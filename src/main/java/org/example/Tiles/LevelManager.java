@@ -8,15 +8,21 @@ public class LevelManager {
 
     public LevelManager(int level,TilesManager grid){
         TLevel = new TilesLevel(grid);
+        levelSwitch(level);
+    }
+
+    public void levelSwitch(int level){
         switch (level){
             case 1:
                 currentLevel = TLevel.getLevel1();
                 break;
+            case 2:
+                currentLevel = TLevel.getLevel2();
+                break;
             default:
                 currentLevel = TLevel.getLevelDefault();
+                break;
         }
-
-
     }
 
     //Getter/Setter

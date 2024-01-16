@@ -75,10 +75,11 @@ public class Window extends JFrame implements Runnable {
 
     public void intiInput(){
         MListener = new Mouse();
-        KListener = new Keyboard();
+        //KListener = new Keyboard();
         addMouseListener(MListener);
         addMouseMotionListener(MListener);
-        addKeyListener(KListener);
+        MListener.setGrid(screen.getTManager());
+        //addKeyListener(KListener);
         requestFocus();
     }
 
@@ -113,6 +114,10 @@ public class Window extends JFrame implements Runnable {
         return menu;
     }
     public Screen getScreen(){return screen;}
+    public LevelManager getLManager(){return LManager;}
+
+
+    public Mouse getMouse() {return MListener;}
     //////////////////////////////////////////
 
     //Main
@@ -122,7 +127,5 @@ public class Window extends JFrame implements Runnable {
         window.intiInput();
         window.startThread();
     }
-
-
 
 }

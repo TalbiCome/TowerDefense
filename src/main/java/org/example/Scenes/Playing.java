@@ -1,4 +1,15 @@
 package org.example.Scenes;
 
-public class Playing {
+import org.example.Window.Window;
+
+import java.awt.*;
+
+public class Playing extends GameScenes implements Scenes {
+
+    public Playing(Window window){super(window);}
+
+    @Override
+    public void render(Graphics g){
+
+    }
 }

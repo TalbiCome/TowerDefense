@@ -22,6 +22,7 @@ public class Main {
         GameController gameController = new GameController();
         boolean gameResult;
 
+        gameController.startWindow();
         gameResult = mainGameLoop(gameController, 1);
 
         if(gameResult)

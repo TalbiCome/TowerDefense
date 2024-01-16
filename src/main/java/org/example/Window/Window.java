@@ -73,7 +73,7 @@ public class Window extends JFrame implements Runnable {
         playing = new Playing(this);
     }
 
-    private void intiInput(){
+    public void intiInput(){
         MListener = new Mouse();
         KListener = new Keyboard();
         addMouseListener(MListener);
@@ -97,7 +97,7 @@ public class Window extends JFrame implements Runnable {
         lastUpdate = System.nanoTime();
     }
 
-    private void startThread(){
+    public void startThread(){
         gameThread = new Thread(this){};
         gameThread.start();
     }

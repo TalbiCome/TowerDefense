@@ -1,6 +1,7 @@
 package org.example.Window;
 import org.example.Input.*;
 import org.example.Scenes.*;
+import org.example.Tiles.LevelManager;
 
 import javax.swing.*;
 
@@ -14,6 +15,7 @@ public class Window extends JFrame implements Runnable {
     private Keyboard KListener;
 
     private Render render;
+    private LevelManager LManager;
     private Menu menu;
     private Playing playing;
 
@@ -66,6 +68,7 @@ public class Window extends JFrame implements Runnable {
     private void initScenes(){
         screen = new Screen(this);
         render = new Render(this);
+        LManager = new LevelManager(1,screen.getTManager());
         menu = new Menu(this);
         playing = new Playing(this);
     }
@@ -109,6 +112,7 @@ public class Window extends JFrame implements Runnable {
     public Menu getMenu() {
         return menu;
     }
+    public Screen getScreen(){return screen;}
     //////////////////////////////////////////
 
     //Main

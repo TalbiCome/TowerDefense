@@ -2,7 +2,12 @@ package org.example.Tiles;
 
 public class TilesLevel {
 
-    public TilesLevel(){}
+    private TilesManager TManager;
+    public TilesLevel(TilesManager tilesManager){
+        TManager = tilesManager;
+
+
+    }
 
     public int[][] getLevel1(){
         int[][] level = {
@@ -27,6 +32,7 @@ public class TilesLevel {
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         };
+        setTylesType(level);
         return level;
     }
 
@@ -53,6 +59,16 @@ public class TilesLevel {
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         };
+        setTylesType(level);
         return level;
+    }
+
+    private void setTylesType(int[][] level){
+        for(int x=0; x < 20; x++){
+            for(int y=0; y <20; y++){
+                TManager.grid.get(x).get(y).setTypeID(level[x][y]);
+            }
+        }
+
     }
 }

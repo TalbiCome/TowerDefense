@@ -8,8 +8,8 @@ import java.awt.*;
 public class Screen extends JPanel {
 
     private Window window;
-
     private TilesManager TManager;
+
 
     public Screen(Window window){
         this.window = window;
@@ -17,6 +17,12 @@ public class Screen extends JPanel {
     }
 
     public void paintComponent(Graphics g){
+
         super.paintComponent(g);
+        window.getRender().render(g);
+    }
+
+    public TilesManager getTManager() {
+        return TManager;
     }
 }

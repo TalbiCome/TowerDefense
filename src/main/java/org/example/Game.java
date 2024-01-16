@@ -125,7 +125,10 @@ public class Game {
         for (Tower tower: activeTowers) {
             if(isTargetAvailable && tower.target == null)
             {
-                tower.assignNewTarget(activeEnemys.get(0));
+                if(!activeEnemys.get(0).isDead)
+                {
+                    tower.assignNewTarget(activeEnemys.get(0));
+                }
             }
             tower.shootAtTarget();
         }

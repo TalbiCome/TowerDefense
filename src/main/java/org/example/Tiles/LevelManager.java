@@ -17,8 +17,6 @@ public class LevelManager {
 
     }
 
-
-
     //Getter/Setter
     public int[][] getCurrentLevel() {
         return currentLevel;

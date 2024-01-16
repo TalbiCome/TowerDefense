@@ -44,6 +44,26 @@ public class Game {
         headQuarterHP = 30;
     }
 
+    public void loadTestLevel(int levelNum)
+    {
+        switch (levelNum)
+        {
+            case 1:
+                level = Level.loadTestLevel1();
+                break;
+            case 2:
+                level = Level.loadTestLevel2();
+                break;
+            default:
+                throw new IllegalArgumentException("Level number does not exist");
+        }
+
+        for (int encodedEnemy: level.encodedEnemyList) {
+            enemysQueue.add(elementsFactory.createEnemy(encodedEnemy, level.posArray));
+        }
+        headQuarterHP = 30;
+    }
+
     public boolean areAllEnemyDead()
     {
         return enemysQueue.isEmpty() && activeEnemys.isEmpty();

@@ -10,7 +10,7 @@ public class TestGame {
     {
         Game game = Game.getInstance();
         game.resetLevel();
-        game.loadLevel(1);
+        game.loadTestLevel(1);
         return game;
     }
     @Test

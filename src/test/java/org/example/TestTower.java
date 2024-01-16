@@ -22,8 +22,8 @@ public class TestTower {
             {
                 deathTime = i;
             }
-            t1.updateStatus();
-            t2.updateStatus();
+            t1.shootAtTarget();
+            t2.shootAtTarget();
         }
 
         //We verify that the enemy is dead and as stopped at the right time

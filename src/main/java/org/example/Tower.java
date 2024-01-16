@@ -37,7 +37,7 @@ public class Tower extends Elements{
             reloadTimer -= 1;
         }
     }
-    public void shootAt()
+    public void shootAtTarget()
     {
         if(target != null)
         {
@@ -64,10 +64,5 @@ public class Tower extends Elements{
         }
 
         target = newTarget;
-    }
-
-    public void updateStatus()
-    {
-        shootAt();
     }
 }

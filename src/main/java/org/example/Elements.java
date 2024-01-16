@@ -1,6 +1,6 @@
 package org.example;
 
-public class Elements {
+public abstract class Elements {
     Pos position;
     int damage;
 }

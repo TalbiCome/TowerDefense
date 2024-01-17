@@ -17,6 +17,7 @@ public class GameView {
         window.intiInput();
         window.startThread();
         KListener = new Keyboard(this);
+        KListener.setGameController(gameController);
         window.addKeyListener(KListener);
         window.getMouse().setGameController(gameController);
         window.getPlaying().setGameController(gameController);

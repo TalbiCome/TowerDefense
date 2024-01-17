@@ -16,7 +16,7 @@ public class FlyingStrategy implements Strategy{
     @Override
     public void moveToNextPos(Enemy enemy)
     {
-        if(enemy.trailStack.isEmpty())// il est a destionation
+        if(enemy.trailStack.isEmpty())// the enemy as arrived at its final destination
         {
             enemy.isAtEnd = true;
             enemy.isDead = true;

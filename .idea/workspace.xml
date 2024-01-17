@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="On peut faire apparaitre et dessiner toutes les tours actives">
+    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="Pos comment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Input/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Input/Keyboard.java" afterDir="false" />
     </list>
@@ -28,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Interface_Implementation" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,6 +57,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -67,12 +71,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Window.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;comment&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/talbi/Documents/TowerDefense/src/test/java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -153,10 +156,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Window" />
         <item itemvalue="JUnit.TestEnemy" />
-        <item itemvalue="Application.Window" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Window" />
       </list>
     </recent_temporary>
   </component>
@@ -305,6 +306,87 @@
       <option name="project" value="LOCAL" />
       <updated>1705414612832</updated>
     </task>
+    <task id="LOCAL-00017" summary="comment on Elements and ElementsFactory">
+      <option name="closed" value="true" />
+      <created>1705417795765</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1705417795765</updated>
+    </task>
+    <task id="LOCAL-00018" summary="comment on Elements and ElementsFactory">
+      <option name="closed" value="true" />
+      <created>1705417912979</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1705417912979</updated>
+    </task>
+    <task id="LOCAL-00019" summary="comment on Elements and ElementsFactory">
+      <option name="closed" value="true" />
+      <created>1705418122570</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1705418122570</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Enemy comments">
+      <option name="closed" value="true" />
+      <created>1705419842418</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1705419842418</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Enemy comments">
+      <option name="closed" value="true" />
+      <created>1705420063719</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1705420063719</updated>
+    </task>
+    <task id="LOCAL-00022" summary="strategy comment">
+      <option name="closed" value="true" />
+      <created>1705481112895</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1705481112895</updated>
+    </task>
+    <task id="LOCAL-00023" summary="game comment">
+      <option name="closed" value="true" />
+      <created>1705482365025</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1705482365025</updated>
+    </task>
+    <task id="LOCAL-00024" summary="GameController comment">
+      <option name="closed" value="true" />
+      <created>1705482867609</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1705482867609</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Level comment">
+      <option name="closed" value="true" />
+      <created>1705483202148</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1705483202148</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Pos comment">
+      <option name="closed" value="true" />
+      <created>1705483751100</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1705483751100</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <task id="LOCAL-00017" summary="Le niveau apparait aussi sur la fenetre">
       <option name="closed" value="true" />
       <created>1705417132121</created>
@@ -395,6 +477,14 @@
     <MESSAGE value="solved problem on test" />
     <MESSAGE value="working" />
     <MESSAGE value="Juste la fenetre" />
+    <MESSAGE value="comment on Elements and ElementsFactory" />
+    <MESSAGE value="Enemy comments" />
+    <MESSAGE value="strategy comment" />
+    <MESSAGE value="game comment" />
+    <MESSAGE value="GameController comment" />
+    <MESSAGE value="Level comment" />
+    <MESSAGE value="Pos comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pos comment" />
     <MESSAGE value="Le niveau apparait aussi sur la fenetre" />
     <MESSAGE value="On peut changer  le niveau et placer des pseudo tour" />
     <MESSAGE value="On peut faire apparaitre et dessiner toutes les tours actives" />
@@ -414,11 +504,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/example/TestGame.java</url>
           <line>50</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -3,8 +3,17 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Is used to contain the enemy to spawn and their path which will be loaded onto the game
+ */
 public class Level {
+    /**
+     * the list of enemy that will be spawned
+     */
     ArrayList<Integer> encodedEnemyList = new ArrayList<Integer>();
+    /**
+     * the path all the enemy will follow
+     */
     Pos[] posArray;
 
     protected Level(Integer[] encodedEnemyList, Pos[] posArray)

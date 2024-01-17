@@ -65,22 +65,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Window.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Game__Interface",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/talbi/Documents/TowerDefense/src/test/java",
-    "last_opened_file_path": "C:/Users/kisha/Desktop/implementation_interface",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Window.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/talbi/Documents/TowerDefense/src/test/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -154,8 +153,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Window" />
         <item itemvalue="JUnit.TestEnemy" />
+        <item itemvalue="Application.Window" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Window" />
       </list>
     </recent_temporary>
   </component>
@@ -329,6 +330,40 @@
       <updated>1705483575980</updated>
     </task>
     <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Le niveau apparait aussi sur la fenetre">
+      <option name="closed" value="true" />
+      <created>1705417132121</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1705417132121</updated>
+    </task>
+    <task id="LOCAL-00018" summary="On peut changer  le niveau et placer des pseudo tour">
+      <option name="closed" value="true" />
+      <created>1705419094646</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1705419094646</updated>
+    </task>
+    <task id="LOCAL-00019" summary="On peut faire apparaitre et dessiner toutes les tours actives">
+      <option name="closed" value="true" />
+      <created>1705483575980</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1705483575980</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Resolutin de l'initialisation des tours en début de niveau">
+      <option name="closed" value="true" />
+      <created>1705483779215</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1705483779215</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,6 +399,12 @@
     <MESSAGE value="On peut changer  le niveau et placer des pseudo tour" />
     <MESSAGE value="On peut faire apparaitre et dessiner toutes les tours actives" />
     <option name="LAST_COMMIT_MESSAGE" value="On peut faire apparaitre et dessiner toutes les tours actives" />
+    <option name="LAST_COMMIT_MESSAGE" value="Juste la fenetre" />
+    <MESSAGE value="Le niveau apparait aussi sur la fenetre" />
+    <MESSAGE value="On peut changer  le niveau et placer des pseudo tour" />
+    <MESSAGE value="On peut faire apparaitre et dessiner toutes les tours actives" />
+    <MESSAGE value="Resolutin de l'initialisation des tours en début de niveau" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolutin de l'initialisation des tours en début de niveau" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

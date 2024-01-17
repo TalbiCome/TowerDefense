@@ -73,7 +73,4 @@ public abstract class Enemy extends Elements {
             moveToNextPos();
         }
     }
-
-
-
 }

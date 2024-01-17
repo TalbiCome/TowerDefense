@@ -92,4 +92,7 @@ public class Pos {
         return pos1.x == pos2.x && pos1.y == pos2.y;
     }
 
+    public int getX(){return this.x;}
+    public int getY(){return this.y;}
+
 }

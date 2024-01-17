@@ -1,5 +1,6 @@
 package org.example.Input;
 
+import org.example.GameController;
 import org.example.Scenes.GameStates;
 import org.example.Tiles.TilesManager;
 
@@ -10,6 +11,8 @@ import java.awt.event.MouseMotionListener;
 public class Mouse implements MouseListener, MouseMotionListener {
 
     private TilesManager TManager;
+    private GameController gameController;
+    public  void setGameController(GameController gameController){this.gameController = gameController;}
 
     public void setGrid(TilesManager TManager){
         this.TManager = TManager;
@@ -25,6 +28,7 @@ public class Mouse implements MouseListener, MouseMotionListener {
             case 1:
                 System.out.println("Tower construct");
                 TManager.grid.get(x).get(y).setTypeID(10);
+                gameController.addTower(TManager.grid.get(x).get(y).getRow(), TManager.grid.get(x).get(y).getColumn());
                 break;
             case 2:
                 System.out.println("Impossible to construct a tower because it's on the path");

@@ -134,5 +134,11 @@ public class Game {
         }
     }
 
+    public ArrayList<Tower> getActiveTowers() {
+        return activeTowers;
+    }
 
+    public ArrayList<Enemy> getActiveEnemys() {
+        return activeEnemys;
+    }
 }

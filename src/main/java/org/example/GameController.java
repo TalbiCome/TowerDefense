@@ -2,7 +2,7 @@ package org.example;
 
 public class GameController {
     Game game = Game.getInstance();
-    GameView gameView = new GameView();
+    GameView gameView = new GameView(this);
     int monsterSpawnDelay = 5; //updates number between monster spawn
     int monsterSpawnDelayCounter = 5; //updates number before next monster spawn
 
@@ -37,4 +37,7 @@ public class GameController {
         gameView.launchWindow();
     }
 
+    public Game getGame() {
+        return game;
+    }
 }

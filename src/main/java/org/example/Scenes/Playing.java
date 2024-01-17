@@ -1,13 +1,16 @@
 package org.example.Scenes;
 
+import org.example.GameController;
+import org.example.Pos;
 import org.example.Window.Window;
-import org.example.Tiles.*;
+
 
 import java.awt.*;
 
 public class Playing extends GameScenes implements Scenes {
 
     private Window window;
+    private GameController gameController;
     public Playing(Window window){
         super(window);
         this.window = window;
@@ -16,6 +19,12 @@ public class Playing extends GameScenes implements Scenes {
     @Override
     public void render(Graphics g){
         drawMap(g);
+        drawTower(g);
+    }
+
+    @Override
+    public void setGameController(GameController gameController) {
+        this.gameController = gameController;
     }
 
     private Color changeColorToType(int typeID){
@@ -50,4 +59,23 @@ public class Playing extends GameScenes implements Scenes {
             }
         }
     }
+
+    private void drawTower(Graphics g){
+        for(int tower = 0;
+            tower < gameController.getGame().getActiveTowers().size();
+            tower++){
+            Pos pos = gameController.getGame().getActiveTowers().get(tower).getPos();
+            g.setColor(Color.MAGENTA);
+            g.fillRect(pos.getX(), pos.getY(), 32,32 );
+
+        }
+    }
+
+    private void drawEnemy(Graphics g){
+        for(int enemy = 0;
+        enemy < gameController.getGame().getActiveEnemys().size();enemy++){
+
+        }
+    }
+
 }

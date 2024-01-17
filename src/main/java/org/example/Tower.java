@@ -65,4 +65,8 @@ public class Tower extends Elements{
 
         target = newTarget;
     }
+
+    public Pos getPos(){
+        return position;
+    }
 }

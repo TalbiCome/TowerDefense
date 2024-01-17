@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="Le niveau apparait aussi sur la fenetre">
+    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="On peut changer  le niveau et placer des pseudo tour">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Input/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Input/Keyboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Input/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Input/Mouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tiles/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tiles/LevelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Scenes/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Scenes/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Scenes/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Scenes/Playing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Scenes/Scenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Scenes/Scenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +84,7 @@
     "git-widget-placeholder": "Game__Interface",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/talbi/Documents/TowerDefense/src/test/java",
+    "last_opened_file_path": "C:/Users/kisha/Desktop/implementation_interface",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -315,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705417132121</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="On peut changer  le niveau et placer des pseudo tour">
+      <option name="closed" value="true" />
+      <created>1705419094646</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1705419094646</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,7 +362,8 @@
     <MESSAGE value="working" />
     <MESSAGE value="Juste la fenetre" />
     <MESSAGE value="Le niveau apparait aussi sur la fenetre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Le niveau apparait aussi sur la fenetre" />
+    <MESSAGE value="On peut changer  le niveau et placer des pseudo tour" />
+    <option name="LAST_COMMIT_MESSAGE" value="On peut changer  le niveau et placer des pseudo tour" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

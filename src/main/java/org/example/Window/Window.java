@@ -87,7 +87,7 @@ public class Window extends JFrame implements Runnable {
 
     private void callUPS(){
         if(System.currentTimeMillis() - lastTimeUPS >= 1000){
-            System.out.println("UPS : " + updates);
+            //System.out.println("UPS : " + updates);
             updates = 0;
             lastTimeUPS = System.currentTimeMillis();
         }

@@ -60,4 +60,7 @@ public class GameController {
         gameView.launchWindow();
     }
 
+    public Game getGame() {
+        return game;
+    }
 }

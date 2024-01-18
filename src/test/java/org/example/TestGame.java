@@ -1,5 +1,4 @@
 package org.example;
-import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -18,7 +17,7 @@ public class TestGame {
     {
         Game game = prepareTest();
         assertEquals(30, game.headQuarterHP);
-        assertTrue(game.activeEnemys.isEmpty());
+        assertTrue(game.activeEnemies.isEmpty());
         assertTrue(game.activeTowers.isEmpty());
     }
 
@@ -31,7 +30,7 @@ public class TestGame {
         for(int i = 0 ; i < 100; i++)
         {
             game.spawnNextEnemy();
-            game.updateActiveEnemys();
+            game.updateActiveEnemies();
             game.updateTower();
         }
         game.removeTower(new Pos(0, 0));
@@ -49,7 +48,7 @@ public class TestGame {
         for(int i = 0 ; i < 110; i++)
         {
             game.spawnNextEnemy();
-            game.updateActiveEnemys();
+            game.updateActiveEnemies();
             game.updateTower();
         }
         assertTrue(game.didPlayerLost());

@@ -14,13 +14,13 @@ public class Game {
      */
     private static Game instance = null;
     /**
-     * store the active enemys wich will take damage, move and be displayed on screen
+     * store the active enemies which will take damage, move and be displayed on screen
      */
-    ArrayList<Enemy> activeEnemys = new ArrayList<Enemy>();
+    ArrayList<Enemy> activeEnemies = new ArrayList<Enemy>();
     /**
      * store the list of enemy that will be fed to the factory to be instantiated into the active Enemy list
      */
-    Stack<Enemy> enemysQueue = new Stack<Enemy>();
+    Stack<Enemy> enemiesQueue = new Stack<Enemy>();
 
     /**
      * store the list of active towers
@@ -77,7 +77,7 @@ public class Game {
         }
 
         for (int encodedEnemy: level.encodedEnemyList) {
-            enemysQueue.add(elementsFactory.createEnemy(encodedEnemy, level.posArray));
+            enemiesQueue.add(elementsFactory.createEnemy(encodedEnemy, level.posArray));
         }
         headQuarterHP = 30;
     }
@@ -102,7 +102,7 @@ public class Game {
         }
 
         for (int encodedEnemy: level.encodedEnemyList) {
-            enemysQueue.add(elementsFactory.createEnemy(encodedEnemy, level.posArray));
+            enemiesQueue.add(elementsFactory.createEnemy(encodedEnemy, level.posArray));
         }
         headQuarterHP = 30;
     }
@@ -113,7 +113,7 @@ public class Game {
      */
     public boolean areAllEnemyDead()
     {
-        return enemysQueue.isEmpty() && activeEnemys.isEmpty();
+        return enemiesQueue.isEmpty() && activeEnemies.isEmpty();
     }
 
     /**
@@ -130,9 +130,9 @@ public class Game {
      */
     public void resetLevel()
     {
-        activeEnemys.clear();
+        activeEnemies.clear();
         activeTowers.clear();
-        enemysQueue.clear();
+        enemiesQueue.clear();
         headQuarterHP = 30;
     }
 
@@ -141,9 +141,9 @@ public class Game {
      */
     public void spawnNextEnemy()
     {
-        if(!enemysQueue.isEmpty())
+        if(!enemiesQueue.isEmpty())
         {
-            activeEnemys.add(enemysQueue.pop());
+            activeEnemies.add(enemiesQueue.pop());
         }
     }
 
@@ -171,10 +171,10 @@ public class Game {
      * add damage to the base if they are at the end of the position list
      * remove them if they are dead
      */
-    public void updateActiveEnemys()
+    public void updateActiveEnemies()
     {
         ArrayList<Enemy> toDelete = new ArrayList<>();
-        for (Enemy enemy: activeEnemys) {
+        for (Enemy enemy: activeEnemies) {
             enemy.updateStatus();
             if(enemy.isAtEnd)
             {
@@ -186,7 +186,7 @@ public class Game {
                 toDelete.add(enemy);
             }
         }
-        activeEnemys.removeAll(toDelete); //avoid concurrent access to the list of active enemy
+        activeEnemies.removeAll(toDelete); //avoid concurrent access to the list of active enemy
         toDelete.clear();
     }
 
@@ -196,13 +196,13 @@ public class Game {
      */
     public void updateTower()
     {
-        boolean isTargetAvailable = !activeEnemys.isEmpty();
+        boolean isTargetAvailable = !activeEnemies.isEmpty();
         for (Tower tower: activeTowers) {
             if(isTargetAvailable && tower.target == null)
             {
-                if(!activeEnemys.get(0).isDead)
+                if(!activeEnemies.get(0).isDead)
                 {
-                    tower.assignNewTarget(activeEnemys.get(0));
+                    tower.assignNewTarget(activeEnemies.get(0));
                 }
             }
             tower.shootAtTarget();
@@ -213,7 +213,7 @@ public class Game {
         return activeTowers;
     }
 
-    public ArrayList<Enemy> getActiveEnemys() {
-        return activeEnemys;
+    public ArrayList<Enemy> getActiveEnemies() {
+        return activeEnemies;
     }
 }

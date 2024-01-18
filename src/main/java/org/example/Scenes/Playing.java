@@ -73,7 +73,7 @@ public class Playing extends GameScenes implements Scenes {
 
     private void drawEnemy(Graphics g){
         for(int enemy = 0;
-        enemy < gameController.getGame().getActiveEnemys().size();enemy++){
+            enemy < gameController.getGame().getActiveEnemies().size(); enemy++){
 
         }
     }

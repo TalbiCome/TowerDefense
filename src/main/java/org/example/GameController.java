@@ -52,7 +52,7 @@ public class GameController {
             monsterSpawnDelayCounter -= 1;
         }
 
-        game.updateActiveEnemys();
+        game.updateActiveEnemies();
         game.updateTower();
     }
 

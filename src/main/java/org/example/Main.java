@@ -1,4 +1,8 @@
 package org.example;
+
+import java.sql.Time;
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     public static boolean mainGameLoop(GameController gameController,int level)
     {
@@ -6,6 +10,12 @@ public class Main {
         gameController.initGameLevel(1);
         while (!gameController.game.didPlayerLost() || !gameController.game.areAllEnemyDead())
         {
+            try {
+                TimeUnit.MICROSECONDS.sleep(10000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
             //regarder clique souris
             gameController.updateGameStatus();
         }

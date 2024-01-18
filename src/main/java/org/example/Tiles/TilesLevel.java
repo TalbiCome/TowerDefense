@@ -1,5 +1,7 @@
 package org.example.Tiles;
 
+import java.util.ArrayList;
+
 public class TilesLevel {
 
     private TilesManager TManager;
@@ -65,7 +67,7 @@ public class TilesLevel {
 
     public int[][] getLevelDefault(){
         int[][] level = {
-                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -84,7 +86,7 @@ public class TilesLevel {
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
         };
         setTylesType(level);
         return level;
@@ -98,4 +100,22 @@ public class TilesLevel {
         }
 
     }
+
+    private ArrayList<Tiles> setPath(int[][] level, Tiles start ){
+        ArrayList<Tiles> path = new ArrayList<>();
+        start.setPrevious(null);
+        path.add(start);
+
+
+        return path;
+    }
+
+
+    /*private Tiles getNextTiles(Tiles current){
+        for(int x = 0;x< current.getNeighbours().size(); x++){
+            if(current.getNeighbours().get(x).getTypeID() == 2){
+                //return current.
+            }
+        }
+    }*/
 }

@@ -14,6 +14,11 @@ public class Pos {
     /*** minBound corresponding to the screen size in pixels*/
     static final int minBoundY = 0;
 
+    /**
+     * create the POS if the coordinates are not out of bounds of the screen
+     * @param x coordinate
+     * @param y coordinate
+     */
     public Pos(int x, int y)
     {
         if(x > maxBoundX || x < minBoundX || y > maxBoundY || y < minBoundY) { //avoid position out of screen
@@ -24,6 +29,10 @@ public class Pos {
         this.y = y;
     }
 
+    /**
+     * create a new pos from an already existing one to avoid using the same reference to an object
+     * @param pos the created pos will have the same coordinates
+     */
     public Pos(Pos pos)
     {
         this.x = pos.x;
@@ -50,9 +59,9 @@ public class Pos {
 
     /**
      * Move the actual position by adding the value in parameters to each axis. If the value exceed
-     * the max/min bound the set the value on the according bound
-     * @param xMovement will be added to the actual x-axis position
-     * @param yMovement will be added to the actual y-axis position
+     * the max/min bound them the set the value on the according bound
+     * @param target the position the enemy will move to
+     * @param moveDistance the distance in pixels the enemy will travel
      */
     public void moveTo(Pos target, int moveDistance)
     {
@@ -87,6 +96,12 @@ public class Pos {
         }
     }
 
+    /**
+     * check if two position have the same coordinates
+     * @param pos1
+     * @param pos2
+     * @return true if pos1 == pos2
+     */
     public static boolean arePosesEquals(Pos pos1, Pos pos2)
     {
         return pos1.x == pos2.x && pos1.y == pos2.y;

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="On peut faire apparaitre et dessiner toutes les tours actives">
+    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="Pos comment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Input/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Input/Keyboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/Interface_Implementation" />
+    <option name="BRANCH" value="origin/Game_Interface" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -329,32 +328,6 @@
       <option name="project" value="LOCAL" />
       <updated>1705483575980</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
-    <option name="localTasksCounter" value="17" />
-    <task id="LOCAL-00017" summary="Le niveau apparait aussi sur la fenetre">
-      <option name="closed" value="true" />
-      <created>1705417132121</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1705417132121</updated>
-    </task>
-    <task id="LOCAL-00018" summary="On peut changer  le niveau et placer des pseudo tour">
-      <option name="closed" value="true" />
-      <created>1705419094646</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1705419094646</updated>
-    </task>
-    <task id="LOCAL-00019" summary="On peut faire apparaitre et dessiner toutes les tours actives">
-      <option name="closed" value="true" />
-      <created>1705483575980</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1705483575980</updated>
-    </task>
     <task id="LOCAL-00020" summary="Resolutin de l'initialisation des tours en début de niveau">
       <option name="closed" value="true" />
       <created>1705483779215</created>
@@ -398,8 +371,6 @@
     <MESSAGE value="Le niveau apparait aussi sur la fenetre" />
     <MESSAGE value="On peut changer  le niveau et placer des pseudo tour" />
     <MESSAGE value="On peut faire apparaitre et dessiner toutes les tours actives" />
-    <option name="LAST_COMMIT_MESSAGE" value="On peut faire apparaitre et dessiner toutes les tours actives" />
-    <option name="LAST_COMMIT_MESSAGE" value="Juste la fenetre" />
     <MESSAGE value="Le niveau apparait aussi sur la fenetre" />
     <MESSAGE value="On peut changer  le niveau et placer des pseudo tour" />
     <MESSAGE value="On peut faire apparaitre et dessiner toutes les tours actives" />

@@ -4,9 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="Pos comment">
+    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="correction faute orthographe enemys to enemies">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/FileReading.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilderInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelDirector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/path_0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/path_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/levelBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Level.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,28 +79,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Window.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/talbi/Documents/TowerDefense/src/test/java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Window.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Builder",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/talbi/Documents/TowerDefense/src/test/java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\talbi\Documents\TowerDefense\src\main\java\org\example\LevelBuilder\LevelFiles" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestGame">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="TowerDefense" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.LevelBuilder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,7 +121,20 @@
       <module name="TowerDefense" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.Window.*" />
+          <option name="PATTERN" value="org.example.LevelBuilder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="levelBuilderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.LevelBuilder.levelBuilderTest" />
+      <module name="TowerDefense" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.LevelBuilder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,7 +146,7 @@
       <module name="TowerDefense" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.LevelBuilder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,6 +179,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.levelBuilderTest" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Window" />
       <item itemvalue="JUnit.TestTower" />
@@ -152,10 +189,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.levelBuilderTest" />
         <item itemvalue="JUnit.TestEnemy" />
         <item itemvalue="Application.Window" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Window" />
       </list>
     </recent_temporary>
   </component>
@@ -336,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705483779215</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="correction faute orthographe enemys to enemies">
+      <option name="closed" value="true" />
+      <created>1705592851345</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1705592851345</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,17 +420,12 @@
     <MESSAGE value="On peut changer  le niveau et placer des pseudo tour" />
     <MESSAGE value="On peut faire apparaitre et dessiner toutes les tours actives" />
     <MESSAGE value="Resolutin de l'initialisation des tours en début de niveau" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolutin de l'initialisation des tours en début de niveau" />
+    <MESSAGE value="correction faute orthographe enemys to enemies" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction faute orthographe enemys to enemies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="i == 40 || i == 998" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/TestGame.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>21</line>

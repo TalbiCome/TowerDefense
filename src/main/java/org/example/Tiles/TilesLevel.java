@@ -1,5 +1,7 @@
 package org.example.Tiles;
 
+import org.example.Pos;
+
 import java.util.ArrayList;
 
 import static java.lang.Math.abs;
@@ -7,10 +9,10 @@ import static java.lang.Math.abs;
 public class TilesLevel {
 
     private TilesManager TManager;
+    private ArrayList<Pos> path;
     public TilesLevel(TilesManager tilesManager){
         TManager = tilesManager;
-
-
+        path = new ArrayList<>();
     }
 
     public int[][] getLevel1(){
@@ -37,8 +39,9 @@ public class TilesLevel {
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         };
         setTylesType(level);
-        setPath(level,TManager.grid.get(9).get(0));
-        //System.out.println(TManager.grid.get(9).get(0).getTypeID());
+        ArrayList<Tiles> p = setPath(level,TManager.grid.get(9).get(0));
+        convertToPos(p);
+
         return level;
     }
 
@@ -66,7 +69,8 @@ public class TilesLevel {
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         };
         setTylesType(level);
-        setPath(level, TManager.grid.get(9).get(0));
+        ArrayList<Tiles> p = setPath(level,TManager.grid.get(9).get(0));
+        convertToPos(p);
         return level;
     }
 
@@ -133,8 +137,6 @@ public class TilesLevel {
         return path;
     }
 
-
-
     private Tiles getNextTiles(Tiles tiles,int i){
         //System.out.println("Number of neighbours : "+tiles.getNeighbours().size());
         //System.out.println("Pos :" + tiles.getColumn() /32+", " + tiles.getRow()/32);
@@ -170,5 +172,17 @@ public class TilesLevel {
             return true;
         }
         return false;
+    }
+
+    private void convertToPos(ArrayList<Tiles> tile){
+        path.clear();
+        for(int x = 0; x < tile.size();x++){
+            path.add(new Pos(tile.get(x).getRow(), tile.get(x).getColumn()));
+            System.out.println(path.get(x).getX()+", "+ path.get(x).getY());
+        }
+    }
+
+    public ArrayList<Pos> getPath(){
+        return path;
     }
 }

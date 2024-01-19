@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="Ajout des voisins, + debut du path">
+    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Input/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Input/Mouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -345,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705585008826</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="path">
+      <option name="closed" value="true" />
+      <created>1705662409146</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1705662409146</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -360,7 +367,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="README.md update" />
     <MESSAGE value="removed warning in pom.xml" />
     <MESSAGE value="can test with maven" />
     <MESSAGE value="added swing to pom" />
@@ -385,7 +391,8 @@
     <MESSAGE value="On peut faire apparaitre et dessiner toutes les tours actives" />
     <MESSAGE value="Resolutin de l'initialisation des tours en début de niveau" />
     <MESSAGE value="Ajout des voisins, + debut du path" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des voisins, + debut du path" />
+    <MESSAGE value="path" />
+    <option name="LAST_COMMIT_MESSAGE" value="path" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

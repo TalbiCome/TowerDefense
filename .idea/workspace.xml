@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="correction faute orthographe enemys to enemies">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/FileReading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilderInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelDirector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/path_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/path_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/levelBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Level.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -422,13 +407,16 @@
     <MESSAGE value="Resolutin de l'initialisation des tours en début de niveau" />
     <MESSAGE value="correction faute orthographe enemys to enemies" />
     <option name="LAST_COMMIT_MESSAGE" value="correction faute orthographe enemys to enemies" />
+    <MESSAGE value="Ajout des voisins, + debut du path" />
+    <MESSAGE value="path" />
+    <option name="LAST_COMMIT_MESSAGE" value="path" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>21</line>
+          <line>31</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>

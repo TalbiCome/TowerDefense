@@ -1,5 +1,6 @@
 package org.example.Scenes;
 
+import org.example.Enemy;
 import org.example.GameController;
 import org.example.Pos;
 import org.example.Window.Window;
@@ -20,6 +21,7 @@ public class Playing extends GameScenes implements Scenes {
     public void render(Graphics g){
         drawMap(g);
         drawTower(g);
+        drawEnemy(g);
     }
 
     @Override
@@ -72,9 +74,9 @@ public class Playing extends GameScenes implements Scenes {
     }
 
     private void drawEnemy(Graphics g){
-        for(int enemy = 0;
-            enemy < gameController.getGame().getActiveEnemies().size(); enemy++){
-
+        for(Enemy enemy:gameController.getGame().getActiveEnemys()){
+            g.setColor(Color.RED);
+            g.fillRect(enemy.getPosition().getX(), enemy.getPosition().getY(), 16,16 );
         }
     }
 

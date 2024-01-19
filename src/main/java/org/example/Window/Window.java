@@ -30,7 +30,7 @@ public class Window extends JFrame implements Runnable {
 
     @Override
     public void run() {
-        timePerFrame = 1000000000.0/30.0; //Frame per second
+        timePerFrame = 1000000000.0/165.0; //Frame per second
         timePerUpdate = 1000000000.0/60.0;
 
         while(true) {

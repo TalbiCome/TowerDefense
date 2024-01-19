@@ -11,10 +11,10 @@ public class GameController {
     GameView gameView = new GameView(this);
 
     /**number of updates between monster spawn*/
-    int monsterSpawnDelay = 5; //updates number between monster spawn
+    int monsterSpawnDelay = 60; //updates number between monster spawn
 
     /**number of updates until the next monster spawn*/
-    int monsterSpawnDelayCounter = 5;
+    int monsterSpawnDelayCounter = monsterSpawnDelay;
 
     /**
      * load a level in the game model

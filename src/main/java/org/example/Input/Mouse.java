@@ -29,9 +29,10 @@ public class Mouse implements MouseListener, MouseMotionListener {
             case 1:
                 System.out.println("Tower construct");
                 TManager.grid.get(x).get(y).setTypeID(10);
+                /*
                 for(int z = 0; z < TManager.grid.get(x).get(y).getNeighbours().size(); z++){
                     TManager.grid.get(x).get(y).getNeighbours().get(z).setTypeID(10);
-                }
+                }*/
                 gameController.addTower(TManager.grid.get(x).get(y).getRow(), TManager.grid.get(x).get(y).getColumn());
                 break;
             case 2:

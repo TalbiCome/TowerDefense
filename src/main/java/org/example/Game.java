@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.LevelBuilder.Level;
+import org.example.LevelBuilder.LevelBuilder;
+import org.example.LevelBuilder.LevelBuilderInterface;
+import org.example.LevelBuilder.LevelDirector;
+
 import java.util.*;
 
 /**
@@ -16,16 +21,16 @@ public class Game {
     /**
      * store the active enemies which will take damage, move and be displayed on screen
      */
-    ArrayList<Enemy> activeEnemies = new ArrayList<Enemy>();
+    ArrayList<Enemy> activeEnemies = new ArrayList<>();
     /**
      * store the list of enemy that will be fed to the factory to be instantiated into the active Enemy list
      */
-    Stack<Enemy> enemiesQueue = new Stack<Enemy>();
+    Stack<Enemy> enemiesQueue = new Stack<>();
 
     /**
      * store the list of active towers
      */
-    ArrayList<Tower> activeTowers = new ArrayList<Tower>();
+    ArrayList<Tower> activeTowers = new ArrayList<>();
 
     /**
      * the factory used to generate enemy from an int value
@@ -37,8 +42,13 @@ public class Game {
      */
     int headQuarterHP = 30;
 
+    /** used to generate a level*/
+    LevelDirector levelDirector = new LevelDirector();
+    /** used to generate a level, can be the normal one or another if map creation*/
+    LevelBuilderInterface builder = new LevelBuilder();
+
     /**
-     * contain the level to generate
+     * contain the generated level
      */
     Level level = null;
 
@@ -64,45 +74,10 @@ public class Game {
      */
     public void loadLevel(int levelNum)
     {
-        switch (levelNum)
-        {
-            case 1:
-                level = Level.loadLevel1();
-                break;
-            case 2:
-                level = Level.loadLevel2();
-                break;
-            default:
-                throw new IllegalArgumentException("Level number does not exist");
-        }
+        level = levelDirector.createLevel(builder, levelNum);
 
-        for (int encodedEnemy: level.encodedEnemyList) {
-            enemiesQueue.add(elementsFactory.createEnemy(encodedEnemy, level.posArray));
-        }
-        headQuarterHP = 30;
-    }
-
-    /**
-     * Only used in tests !!!
-     * load the level by adding its elements into the game
-     * @param levelNum the number referencing the level to generate
-     */
-    public void loadTestLevel(int levelNum)
-    {
-        switch (levelNum)
-        {
-            case 1:
-                level = Level.loadTestLevel1();
-                break;
-            case 2:
-                level = Level.loadTestLevel2();
-                break;
-            default:
-                throw new IllegalArgumentException("Level number does not exist");
-        }
-
-        for (int encodedEnemy: level.encodedEnemyList) {
-            enemiesQueue.add(elementsFactory.createEnemy(encodedEnemy, level.posArray));
+        for (int encodedEnemy: level.encodedEnemiesList) {
+            enemiesQueue.add(elementsFactory.createEnemy(encodedEnemy, level.path));
         }
         headQuarterHP = 30;
     }

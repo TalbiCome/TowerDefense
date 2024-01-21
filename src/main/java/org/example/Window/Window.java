@@ -68,7 +68,7 @@ public class Window extends JFrame implements Runnable {
     private void initScenes(){
         screen = new Screen(this);
         render = new Render(this);
-        LManager = new LevelManager(1,screen.getTManager());
+        LManager = new LevelManager(screen.getTManager());
         menu = new Menu(this);
         playing = new Playing(this);
     }

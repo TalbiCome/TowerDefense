@@ -6,25 +6,12 @@ public class LevelManager {
     private int[][] currentLevel;
     private TilesLevel TLevel;
 
-    public LevelManager(int level,TilesManager grid){
+    public LevelManager(TilesManager grid){
         TLevel = new TilesLevel(grid);
-        levelSwitch(level);
     }
 
-    public void levelSwitch(int level){
-        switch (level){
-            case 0:
-                currentLevel = TLevel.level();
-            case 1:
-                currentLevel = TLevel.getLevel1();
-                break;
-            case 2:
-                currentLevel = TLevel.getLevel2();
-                break;
-            default:
-                currentLevel = TLevel.getLevelDefault();
-                break;
-        }
+    public void levelSwitch(){
+        currentLevel = TLevel.level();
     }
 
     //Getter/Setter

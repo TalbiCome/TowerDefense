@@ -31,19 +31,6 @@ public class Keyboard implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_A){
-            gameView.switchLevel(2);
-            gameController.initGameLevel(2);
-            Mouse mouse = gameView.window.getMouse();
-            mouse.setGrid(gameView.window.getScreen().getTManager());
-        }
-
-        if(e.getKeyCode() == KeyEvent.VK_Z){
-            gameView.switchLevel(1);
-            gameController.initGameLevel(1);
-            Mouse mouse = gameView.window.getMouse();
-            mouse.setGrid(gameView.window.getScreen().getTManager());
-        }
 
     }
 

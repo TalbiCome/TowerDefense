@@ -24,8 +24,8 @@ public class GameView {
 
     }
 
-    public void switchLevel(int i){
-        window.getLManager().levelSwitch(i);
+    public void switchLevel(){
+        window.getLManager().levelSwitch();
     }
 
 }

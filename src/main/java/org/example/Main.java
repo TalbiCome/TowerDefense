@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.Scenes.GameStates;
+
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
@@ -35,6 +37,12 @@ public class Main {
         int levelNum = 0;
         int maxLevelNum = 1;
         gameController.startWindow();
+
+        while (GameStates.gameStates != GameStates.PLAYING)
+        {
+
+        }
+
         while (levelNum <= maxLevelNum)
         {
             gameResult = mainGameLoop(gameController, levelNum);

@@ -53,6 +53,7 @@ public class Game {
     Level level = null;
 
     int money = 30;
+    int moneyDropedByEnemy = 5;
 
     protected Game(){}
 
@@ -171,6 +172,7 @@ public class Game {
                 toDelete.add(enemy);
             }
         }
+        money += toDelete.size()*moneyDropedByEnemy;
         activeEnemies.removeAll(toDelete); //avoid concurrent access to the list of active enemy
         toDelete.clear();
     }

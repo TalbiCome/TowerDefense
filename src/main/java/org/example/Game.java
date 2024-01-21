@@ -78,10 +78,18 @@ public class Game {
     {
         level = levelDirector.createLevel(builder, levelNum);
 
+        /*
         for (int encodedEnemy: level.encodedEnemiesList) {
             enemiesQueue.add(elementsFactory.createEnemy(encodedEnemy, level.path));
         }
+        */
         headQuarterHP = 30;
+    }
+
+    public void addEnemy(int levelnum){
+        for (int encodedEnemy: level.encodedEnemiesList) {
+            enemiesQueue.add(elementsFactory.createEnemy(encodedEnemy, level.path));
+        }
     }
 
     /**
@@ -190,7 +198,11 @@ public class Game {
         return activeTowers;
     }
 
-    public ArrayList<Enemy> getActiveEnemies() {
+    public ArrayList<Enemy> getActiveEnemys() {
         return activeEnemies;
+    }
+
+    public Level getLevel() {
+        return level;
     }
 }

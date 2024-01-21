@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="correction faute orthographe enemys to enemies">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/FileReading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilderInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelDirector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/path_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/path_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/levelBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="ajout commentaire">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Level.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Input/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Input/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,21 +68,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Window.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Builder",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/talbi/Documents/TowerDefense/src/test/java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Window.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestGame.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Scene&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/talbi/Documents/TowerDefense/src/test/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\talbi\Documents\TowerDefense\src\main\java\org\example\LevelBuilder\LevelFiles" />
@@ -102,7 +92,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestGame">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="TowerDefense" />
@@ -381,7 +371,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705592851345</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="ajout du boutton et debut des commentaires">
+      <option name="closed" value="true" />
+      <created>1705828286061</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1705828286061</updated>
+    </task>
+    <task id="LOCAL-00023" summary="ajout commentaire">
+      <option name="closed" value="true" />
+      <created>1705829853991</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1705829853991</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -396,10 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="README.md update" />
-    <MESSAGE value="removed warning in pom.xml" />
-    <MESSAGE value="can test with maven" />
-    <MESSAGE value="added swing to pom" />
     <MESSAGE value="added monster files&#10;Pos class implemented" />
     <MESSAGE value="Documentation for Pos class" />
     <MESSAGE value="pom.xml" />
@@ -421,18 +423,13 @@
     <MESSAGE value="On peut faire apparaitre et dessiner toutes les tours actives" />
     <MESSAGE value="Resolutin de l'initialisation des tours en début de niveau" />
     <MESSAGE value="correction faute orthographe enemys to enemies" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction faute orthographe enemys to enemies" />
+    <MESSAGE value="Ajout des voisins, + debut du path" />
+    <MESSAGE value="path" />
+    <MESSAGE value="ajout du boutton et debut des commentaires" />
+    <MESSAGE value="ajout commentaire" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout commentaire" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.example.Pos" memberName="x" />

@@ -12,4 +12,8 @@ public abstract class Elements {
      * damage the elements will do to its enemy
      */
     int damage;
+
+    public Pos getPosition() {
+        return position;
+    }
 }

@@ -30,7 +30,7 @@ public class Window extends JFrame implements Runnable {
 
     @Override
     public void run() {
-        timePerFrame = 1000000000.0/30.0; //Frame per second
+        timePerFrame = 1000000000.0/120.0; //Frame per second
         timePerUpdate = 1000000000.0/60.0;
 
         while(true) {
@@ -68,18 +68,16 @@ public class Window extends JFrame implements Runnable {
     private void initScenes(){
         screen = new Screen(this);
         render = new Render(this);
-        LManager = new LevelManager(1,screen.getTManager());
+        LManager = new LevelManager(screen.getTManager());
         menu = new Menu(this);
         playing = new Playing(this);
     }
 
     public void intiInput(){
         MListener = new Mouse();
-        //KListener = new Keyboard();
         addMouseListener(MListener);
         addMouseMotionListener(MListener);
         MListener.setGrid(screen.getTManager());
-        //addKeyListener(KListener);
         requestFocus();
     }
 
@@ -87,7 +85,6 @@ public class Window extends JFrame implements Runnable {
 
     private void callUPS(){
         if(System.currentTimeMillis() - lastTimeUPS >= 1000){
-            //System.out.println("UPS : " + updates);
             updates = 0;
             lastTimeUPS = System.currentTimeMillis();
         }
@@ -115,17 +112,6 @@ public class Window extends JFrame implements Runnable {
     }
     public Screen getScreen(){return screen;}
     public LevelManager getLManager(){return LManager;}
-
-
     public Mouse getMouse() {return MListener;}
     //////////////////////////////////////////
-
-    //Main
-
-    public static void main(String[] args){
-        Window window = new Window();
-        window.intiInput();
-        window.startThread();
-    }
-
 }

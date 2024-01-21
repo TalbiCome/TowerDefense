@@ -1,5 +1,7 @@
 package org.example;
 
+import com.sun.source.tree.BreakTree;
+
 /**
  * controller of the MVC design pattern
  */
@@ -11,10 +13,10 @@ public class GameController {
     GameView gameView = new GameView(this);
 
     /**number of updates between monster spawn*/
-    int monsterSpawnDelay = 5; //updates number between monster spawn
+    int monsterSpawnDelay = 60; //updates number between monster spawn
 
     /**number of updates until the next monster spawn*/
-    int monsterSpawnDelayCounter = 5;
+    int monsterSpawnDelayCounter = monsterSpawnDelay;
 
     /**
      * load a level in the game model
@@ -24,6 +26,8 @@ public class GameController {
     {
         game.resetLevel();
         game.loadLevel(levelNum);
+        gameView.switchLevel();
+        game.addEnemy(levelNum);
     }
 
     /**
@@ -69,5 +73,9 @@ public class GameController {
 
     public Game getGame() {
         return game;
+    }
+
+    public GameView getGameView() {
+        return gameView;
     }
 }

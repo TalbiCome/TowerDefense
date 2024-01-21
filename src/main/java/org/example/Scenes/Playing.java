@@ -26,6 +26,7 @@ public class Playing extends GameScenes implements Scenes {
         drawMap(g);
         drawTower(g);
         drawEnemy(g);
+        drawBaseHp(g);
     }
 
     @Override
@@ -100,5 +101,18 @@ public class Playing extends GameScenes implements Scenes {
             g.fillRect(enemy.getPosition().getX(), enemy.getPosition().getY(), 16,16 );
         }
     }
+
+    private void drawBaseHp(Graphics g){
+        g.setColor(Color.gray);
+        g.drawRect(0,0,300,20);
+        g.setColor(Color.GREEN);
+        g.fillRect(0,0,gameController.getGame().getHeadQuarterHP()*10,20);
+    }
+
+    /*
+    private void drawGold(Graphics g){
+        gameController.getGame().getMoney();
+    }
+     */
 
 }

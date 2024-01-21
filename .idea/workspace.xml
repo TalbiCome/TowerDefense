@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="ajout commentaire">
+    <list default="true" id="f44747d8-c9ea-4399-9d50-7dcf27f38a16" name="Changes" comment="ajout de l'affichage de la bar des HP de la base">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Input/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Input/Keyboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Input/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Input/Mouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilderInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelBuilderInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelDirector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LevelBuilder/LevelFiles/map_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tiles/TilesLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Scenes/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Scenes/Playing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,7 +384,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705829853991</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Ajout des differents path">
+      <option name="closed" value="true" />
+      <created>1705847492109</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1705847492109</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Ajout des differents path">
+      <option name="closed" value="true" />
+      <created>1705847500137</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1705847500137</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -406,8 +415,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added monster files&#10;Pos class implemented" />
-    <MESSAGE value="Documentation for Pos class" />
     <MESSAGE value="pom.xml" />
     <MESSAGE value="Enemy Moving and Taking damage" />
     <MESSAGE value="added flying enemy" />
@@ -431,7 +438,9 @@
     <MESSAGE value="path" />
     <MESSAGE value="ajout du boutton et debut des commentaires" />
     <MESSAGE value="ajout commentaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout commentaire" />
+    <MESSAGE value="Ajout des differents path" />
+    <MESSAGE value="ajout de l'affichage de la bar des HP de la base" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de l'affichage de la bar des HP de la base" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

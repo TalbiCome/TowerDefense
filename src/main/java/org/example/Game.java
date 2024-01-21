@@ -207,4 +207,8 @@ public class Game {
     public Level getLevel() {
         return level;
     }
+
+    public int getHeadQuarterHP(){
+        return headQuarterHP;
+    }
 }

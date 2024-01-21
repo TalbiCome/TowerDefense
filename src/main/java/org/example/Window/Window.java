@@ -27,6 +27,7 @@ public class Window extends JFrame implements Runnable {
 
     private int updates;
     private long lastTimeUPS;
+    public int timer;
 
     @Override
     public void run() {
@@ -87,6 +88,7 @@ public class Window extends JFrame implements Runnable {
         if(System.currentTimeMillis() - lastTimeUPS >= 1000){
             updates = 0;
             lastTimeUPS = System.currentTimeMillis();
+            timer++;
         }
     }
 
@@ -98,6 +100,7 @@ public class Window extends JFrame implements Runnable {
     public void startThread(){
         gameThread = new Thread(this){};
         gameThread.start();
+        timer = 0;
     }
 
     //Getter/Setter
@@ -113,5 +116,13 @@ public class Window extends JFrame implements Runnable {
     public Screen getScreen(){return screen;}
     public LevelManager getLManager(){return LManager;}
     public Mouse getMouse() {return MListener;}
+
+    public void beginTimer(){
+        timer = 0;
+    }
+    public int getTimer() {
+        return timer;
+    }
+
     //////////////////////////////////////////
 }

@@ -28,6 +28,7 @@ public class GameController {
         game.loadLevel(levelNum);
         gameView.switchLevel();
         game.addEnemy(levelNum);
+        gameView.window.beginTimer();
     }
 
     /**

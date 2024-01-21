@@ -7,6 +7,7 @@ import org.example.Window.Window;
 
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Playing extends GameScenes implements Scenes {
 
@@ -28,6 +29,7 @@ public class Playing extends GameScenes implements Scenes {
         drawEnemy(g);
         drawBaseHp(g);
         drawGold(g);
+        drawTimer(g);
     }
 
     @Override
@@ -108,7 +110,6 @@ public class Playing extends GameScenes implements Scenes {
             g.setColor(Color.GREEN);
             g.fillRect(enemy.getPosition().getX(), enemy.getPosition().getY() - 10, enemy.getHP() * 4, 5);
         }
-
     }
 
     private Color typeOfEnemy(Enemy enemy){
@@ -130,7 +131,11 @@ public class Playing extends GameScenes implements Scenes {
 
 
     private void drawGold(Graphics g){
-        g.drawString(String.valueOf(gameController.getGame().getMoney()),600 ,25);
+        g.drawString(String.valueOf("Gold :" + gameController.getGame().getMoney()),0 ,50);
+    }
+
+    private void drawTimer(Graphics g){
+        g.drawString("Timer : " + gameController.getGameView().window.timer + ".s", 0,75);
     }
 
 }

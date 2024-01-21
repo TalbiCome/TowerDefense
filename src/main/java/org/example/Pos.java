@@ -70,8 +70,8 @@ public class Pos {
             throw new IllegalArgumentException("Target to move to is not in screen boundary");
         }
 
-        int distXFromTarget = target.x - x;
-        int distYFromTarget = target.y - y;
+        int distXFromTarget = Math.abs(target.x - x);
+        int distYFromTarget = Math.abs(target.y - y);
 
         if(distXFromTarget != 0)
         {
@@ -81,7 +81,15 @@ public class Pos {
             }
             else
             {
-                x = x + moveDistance;
+                if(target.x < x) //cas ou la target est a gauche
+                {
+                    x = x - moveDistance;
+                }
+                else
+                {
+                    x = x + moveDistance;
+                }
+
             }
         } else if (distYFromTarget != 0)        //Si la cible est dans la porté de deplacement, on s'arrete dessus
         {
@@ -91,7 +99,14 @@ public class Pos {
             }
             else
             {
-                y = y + moveDistance;
+                if(target.y < y) //cas ou la target est a gauche
+                {
+                    y = y - moveDistance;
+                }
+                else
+                {
+                    y = y + moveDistance;
+                }
             }
         }
     }

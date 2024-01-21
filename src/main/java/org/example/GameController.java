@@ -1,5 +1,7 @@
 package org.example;
 
+import com.sun.source.tree.BreakTree;
+
 /**
  * controller of the MVC design pattern
  */
@@ -62,5 +64,9 @@ public class GameController {
 
     public Game getGame() {
         return game;
+    }
+
+    public GameView getGameView() {
+        return gameView;
     }
 }

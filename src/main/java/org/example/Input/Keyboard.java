@@ -15,6 +15,11 @@ public class Keyboard implements KeyListener {
         this.gameView = gameView;
     }
 
+    /**
+     * set the gameController in this class to make sure we can communicate change
+     * to all other
+     * @param gameController
+     */
     public void setGameController(GameController gameController) {
         this.gameController = gameController;
     }

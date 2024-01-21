@@ -9,16 +9,34 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
+import static org.example.Scenes.GameStates.PLAYING;
+
 public class Mouse implements MouseListener, MouseMotionListener {
 
     private TilesManager TManager;
     private GameController gameController;
+
+    /**
+     *  set the gameController in this class to make sure we can communicate change
+     *  to all other
+     * @param gameController
+     */
     public  void setGameController(GameController gameController){this.gameController = gameController;}
 
+    /**
+     * get the grid to search in the grid which tile we need to change
+     * @param TManager
+     */
     public void setGrid(TilesManager TManager){
         this.TManager = TManager;
     };
 
+    /**
+     * Construct tower on tiles of grass (1) and can't construct anything
+     * if it is outside the grid or any other tiles not grass
+     * @param x is the column of the tile
+     * @param y is the row of the tile
+     */
     private void getTiles(int x, int y){
         int typeID = 100;
         if(x <20 && y<20){typeID = TManager.grid.get(x).get(y).getTypeID();}
@@ -29,10 +47,6 @@ public class Mouse implements MouseListener, MouseMotionListener {
             case 1:
                 System.out.println("Tower construct");
                 TManager.grid.get(x).get(y).setTypeID(10);
-                /*
-                for(int z = 0; z < TManager.grid.get(x).get(y).getNeighbours().size(); z++){
-                    TManager.grid.get(x).get(y).getNeighbours().get(z).setTypeID(10);
-                }*/
                 gameController.addTower(TManager.grid.get(x).get(y).getRow(), TManager.grid.get(x).get(y).getColumn());
                 break;
             case 2:
@@ -42,42 +56,36 @@ public class Mouse implements MouseListener, MouseMotionListener {
                 System.out.println("Error, it is a tower or outside of the grid");
         }
     }
+
+    /**
+     * check if the button is clicked by comparing its hitbox and the position x,y
+     * @param x position of the mouse when clicked on the axis x
+     * @param y position of the mouse when clicked on the axis y
+     * @return
+     */
+    private boolean buttonClicked(int x, int y) {
+        if(gameController.getGameView().window.getMenu().getPlayButton().getBounds().contains(x,y)){
+            return true;
+        }
+        return false;
+    }
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getButton() == MouseEvent.BUTTON1 && GameStates.gameStates == GameStates.PLAYING){
-            System.out.println("I clicked : "+ e.getY()/32 + ", " + e.getX()/32);
-            getTiles(e.getY()/32-1,e.getX()/32);
+        if(GameStates.gameStates == GameStates.MENU){
+            if(buttonClicked(e.getX(),e.getY())){GameStates.setGameStates(PLAYING);}
         }
+        if(e.getButton() == MouseEvent.BUTTON1 && GameStates.gameStates == PLAYING){getTiles(e.getY()/32-1,e.getX()/32);}
     }
-
     @Override
-    public void mousePressed(MouseEvent e) {
-
-
-    }
-
+    public void mousePressed(MouseEvent e) {}
     @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
+    public void mouseReleased(MouseEvent e) {}
     @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
+    public void mouseEntered(MouseEvent e) {}
     @Override
-    public void mouseExited(MouseEvent e) {
-
-    }
-
+    public void mouseExited(MouseEvent e) {}
     @Override
-    public void mouseDragged(MouseEvent e) {
-
-    }
-
+    public void mouseDragged(MouseEvent e) {}
     @Override
-    public void mouseMoved(MouseEvent e) {
-
-    }
+    public void mouseMoved(MouseEvent e) {}
 }

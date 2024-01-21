@@ -191,4 +191,12 @@ public class Game {
     public ArrayList<Enemy> getActiveEnemies() {
         return activeEnemies;
     }
+
+    public ArrayList<Enemy> getActiveEnemys() {
+        return activeEnemies;
+    }
+
+    public Level getLevel() {
+        return level;
+    }
 }

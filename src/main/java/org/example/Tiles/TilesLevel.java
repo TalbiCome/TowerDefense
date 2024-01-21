@@ -1,5 +1,6 @@
 package org.example.Tiles;
 
+import org.example.Game;
 import org.example.Pos;
 
 import java.util.ArrayList;
@@ -13,6 +14,10 @@ public class TilesLevel {
     public TilesLevel(TilesManager tilesManager){
         TManager = tilesManager;
         path = new ArrayList<>();
+    }
+
+    public int[][] test(){
+        return Game.getInstance().getLevel().map;
     }
 
     public int[][] getLevel1(){

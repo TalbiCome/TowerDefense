@@ -30,7 +30,7 @@ public class Window extends JFrame implements Runnable {
 
     @Override
     public void run() {
-        timePerFrame = 1000000000.0/165.0; //Frame per second
+        timePerFrame = 1000000000.0/120.0; //Frame per second
         timePerUpdate = 1000000000.0/60.0;
 
         while(true) {
@@ -68,7 +68,7 @@ public class Window extends JFrame implements Runnable {
     private void initScenes(){
         screen = new Screen(this);
         render = new Render(this);
-        LManager = new LevelManager(1,screen.getTManager());
+        LManager = new LevelManager(0,screen.getTManager());
         menu = new Menu(this);
         playing = new Playing(this);
     }

@@ -27,6 +27,7 @@ public class GameController {
         game.resetLevel();
         game.loadLevel(levelNum);
         gameView.switchLevel();
+        game.addEnemy(levelNum);
     }
 
     /**

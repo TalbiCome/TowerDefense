@@ -1,7 +1,6 @@
 package org.example.Tiles;
 
 import org.example.Game;
-import org.example.LevelBuilder.Level;
 import org.example.Pos;
 
 import java.util.ArrayList;
@@ -21,7 +20,11 @@ public class TilesLevel {
         setTylesType(Game.getInstance().getLevel().map);
         ArrayList<Tiles> pos = setPath(TManager.grid.get(9).get(0));
         convertToPos(pos);
-
+        Pos[] give = new Pos[path.size()];
+        for(int x = 0; x < path.size(); x++){
+            give[x] = path.get(x);
+        }
+        Game.getInstance().getLevel().path = give;
         return Game.getInstance().getLevel().map;
     }
     private void setTylesType(int[][] level){

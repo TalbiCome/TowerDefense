@@ -3,8 +3,10 @@ package org.example.Input;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javafx.scene.input.KeyCode;
 import org.example.GameController;
 import org.example.GameView;
+import org.example.Scenes.GameStates;
 import org.example.Window.Window;
 
 public class Keyboard implements KeyListener {
@@ -27,10 +29,19 @@ public class Keyboard implements KeyListener {
     @Override
     public void keyTyped(KeyEvent e) {
 
+
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
+        if(GameStates.gameStates == GameStates.PLAYING) {
+            if (e.getKeyCode() == KeyEvent.VK_P) {
+                gameController.initGameLevel(0);
+            }
+            if(e.getKeyCode() == KeyEvent.VK_N){
+                gameController.initGameLevel(1);
+            }
+        }
 
     }
 

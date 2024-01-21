@@ -18,6 +18,7 @@ public class TilesLevel {
 
     public int[][] level(){
         setTylesType(Game.getInstance().getLevel().map);
+        setTylesType(Game.getInstance().getLevel().chemin);
         ArrayList<Tiles> pos = setPath(TManager.grid.get(9).get(0));
         convertToPos(pos);
         Pos[] give = new Pos[path.size()];
@@ -30,9 +31,11 @@ public class TilesLevel {
     private void setTylesType(int[][] level){
         for(int x=0; x < 20; x++){
             for(int y=0; y <20; y++){
-                TManager.grid.get(x).get(y).setTypeID(level[x][y]);
-                TManager.grid.get(x).get(y).setNext(null);
-                TManager.grid.get(x).get(y).setPrevious(null);
+                if(level[x][y] != 3) {
+                    TManager.grid.get(x).get(y).setTypeID(level[x][y]);
+                    TManager.grid.get(x).get(y).setNext(null);
+                    TManager.grid.get(x).get(y).setPrevious(null);
+                }
             }
         }
 

@@ -17,6 +17,10 @@ public class LevelBuilder implements LevelBuilderInterface {
         currentLevel.map = FileReading.readMapFile("src/main/java/org/example/LevelBuilder/LevelFiles/map_" + mapNumber + ".txt");
     }
 
+    public void buildChemin(int cheminNumber){
+        currentLevel.chemin = FileReading.readMapFile("src/main/java/org/example/LevelBuilder/LevelFiles/chemin_" + cheminNumber + ".txt");
+    }
+
     public void buildPath(int pathNumber)
     {
         int[] tmp = FileReading.readEnemyFile("src/main/java/org/example/LevelBuilder/LevelFiles/path_" + pathNumber + ".txt");

@@ -74,7 +74,7 @@ public class Mouse implements MouseListener, MouseMotionListener {
         if(GameStates.gameStates == GameStates.MENU){
             if(buttonClicked(e.getX(),e.getY())){
                 GameStates.setGameStates(PLAYING);
-                gameController.initGameLevel(0);
+                gameController.initGameLevel(1);
             }
         }
         if(e.getButton() == MouseEvent.BUTTON1 && GameStates.gameStates == PLAYING){getTiles(e.getY()/32-1,e.getX()/32);}

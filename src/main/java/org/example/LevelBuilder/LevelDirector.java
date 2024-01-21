@@ -7,6 +7,7 @@ public class LevelDirector {
         builder.buildLevel();
 
         builder.buildMap(levelNum);
+        builder.buildChemin(levelNum);
         builder.buildPath(levelNum);
         builder.buildEnemiesList(levelNum);
         return builder.getLevel();

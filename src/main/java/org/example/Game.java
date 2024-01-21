@@ -52,6 +52,8 @@ public class Game {
      */
     Level level = null;
 
+    int money = 30;
+
     protected Game(){}
 
     /**

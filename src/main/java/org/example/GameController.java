@@ -33,7 +33,14 @@ public class GameController {
      */
     public void addTower(int x, int y)
     {
-        game.spawnTower(new Pos(x, y));
+        if(game.money >= Tower.towerCost) {
+            game.spawnTower(new Pos(x, y));
+            game.money -= Tower.towerCost;
+        }
+        else
+        {
+            System.out.println("not enough cash");
+        }
     }
 
     /**

@@ -9,6 +9,8 @@ public class Tower extends Elements{
     /** Time left until next shot is available*/
     int reloadTimer;
 
+    static int towerCost = 10;
+
     /** the enemy target the tower will shoot at*/
     Enemy target = null;
 

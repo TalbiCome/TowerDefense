@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class TilesManager {
 
     public ArrayList <ArrayList <Tiles>> grid = new ArrayList<>();
-
     public TilesManager(){
         for(int x=0; x < 20; x++){
             ArrayList<Tiles> temporaryList = new ArrayList<>();
@@ -22,40 +21,17 @@ public class TilesManager {
         }
 
     }
-
     private ArrayList<Tiles> setNeighbours(int i, int j){
         ArrayList<Tiles> neighbour = new ArrayList<>();
-        //System.out.println("Current point : "+grid.get(i).get(j).getColumn() +" ," + grid.get(i).get(j).getRow());
-        if(i > 0 && j > 0){
-            neighbour.add(grid.get(i-1).get(j-1));
-            //System.out.println("Adding neighbors 1 : "+grid.get(i-1).get(j-1).getColumn() +" ," + grid.get(i-1).get(j-1).getRow());
-        }
-        if(i < 19 && j > 0){
-            neighbour.add(grid.get(i+1).get(j-1));
-            //System.out.println("Adding neighbors 2 : "+grid.get(i+1).get(j-1).getColumn() +" ," + grid.get(i+1).get(j-1).getRow());
-        }
-        if(i > 0 && j < 19){
-            neighbour.add(grid.get(i-1).get(j+1)); //bottom left
-            //System.out.println("Adding neighbors 3 : "+grid.get(i-1).get(j+1).getColumn() +" ," + grid.get(i-1).get(j+1).getRow());
-        }
-        if(i < 19 && j < 19){
-           neighbour.add(grid.get(i+1).get(j+1)); //bottom right
-           //System.out.println("Adding neighbors 4 : "+grid.get(i+1).get(j+1).getColumn()+" ," + grid.get(i+1).get(j+1).getRow());
-        }
+        if(i > 0 && j > 0){neighbour.add(grid.get(i-1).get(j-1));}
+        if(i < 19 && j > 0){neighbour.add(grid.get(i+1).get(j-1));}
+        if(i > 0 && j < 19){neighbour.add(grid.get(i-1).get(j+1));}
+        if(i < 19 && j < 19){neighbour.add(grid.get(i+1).get(j+1));}
 
-        if(i > 0){
-            neighbour.add(grid.get(i-1).get(j));
-        }
-        if(i < 19){
-            neighbour.add(grid.get(i+1).get(j));
-        }
-        if(j > 0){
-            neighbour.add(grid.get(i).get(j-1));
-        }
-        if(j < 19){
-            neighbour.add(grid.get(i).get(j+1));
-        }
-
+        if(i > 0){neighbour.add(grid.get(i-1).get(j));}
+        if(i < 19){neighbour.add(grid.get(i+1).get(j));}
+        if(j > 0){neighbour.add(grid.get(i).get(j-1));}
+        if(j < 19){neighbour.add(grid.get(i).get(j+1));}
         return neighbour;
     }
 

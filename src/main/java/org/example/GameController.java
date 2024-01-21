@@ -25,6 +25,7 @@ public class GameController {
     public void initGameLevel(int levelNum)
     {
         game.resetLevel();
+        gameView.switchLevel(levelNum);
         game.loadLevel(levelNum);
     }
 

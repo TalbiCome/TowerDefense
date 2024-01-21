@@ -17,7 +17,6 @@ public class Screen extends JPanel {
     }
 
     public void paintComponent(Graphics g){
-
         super.paintComponent(g);
         window.getRender().render(g);
     }

@@ -13,6 +13,8 @@ public class LevelManager {
 
     public void levelSwitch(int level){
         switch (level){
+            case 0:
+                currentLevel = TLevel.level();
             case 1:
                 currentLevel = TLevel.getLevel1();
                 break;

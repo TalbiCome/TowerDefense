@@ -17,6 +17,10 @@ public class Playing extends GameScenes implements Scenes {
         this.window = window;
     }
 
+    /**
+     * draw tower, the map and the enemy on the screen
+     * @param g
+     */
     @Override
     public void render(Graphics g){
         drawMap(g);
@@ -29,6 +33,11 @@ public class Playing extends GameScenes implements Scenes {
         this.gameController = gameController;
     }
 
+    /**
+     * Change the color we need to show each tiles depending on the type of the tile
+     * @param typeID type of tile, 0,1 or 2
+     * @return color which is the color in a rgb unit( red: ?, green: ?, blue : ?)
+     */
     private Color changeColorToType(int typeID){
         Color color;
         switch (typeID) {
@@ -47,6 +56,10 @@ public class Playing extends GameScenes implements Scenes {
         return color;
     }
 
+    /**
+     * Draw the map on the screen
+     * @param g
+     */
     private void drawMap(Graphics g){
         for(int column= 0; column < 20; column++){
             for(int row=0; row < 20; row++){
@@ -62,6 +75,10 @@ public class Playing extends GameScenes implements Scenes {
         }
     }
 
+    /**
+     * Get all the active tower and draw them on the screen
+     * @param g
+     */
     private void drawTower(Graphics g){
         for(int tower = 0;
             tower < gameController.getGame().getActiveTowers().size();
@@ -73,6 +90,10 @@ public class Playing extends GameScenes implements Scenes {
         }
     }
 
+    /**
+     * get all the active enemy and draw them
+     * @param g
+     */
     private void drawEnemy(Graphics g){
         for(Enemy enemy:gameController.getGame().getActiveEnemys()){
             g.setColor(Color.RED);

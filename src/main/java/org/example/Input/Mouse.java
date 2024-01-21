@@ -61,7 +61,7 @@ public class Mouse implements MouseListener, MouseMotionListener {
      * check if the button is clicked by comparing its hitbox and the position x,y
      * @param x position of the mouse when clicked on the axis x
      * @param y position of the mouse when clicked on the axis y
-     * @return
+     * @return true if it is on the button, false otherwise
      */
     private boolean buttonClicked(int x, int y) {
         if(gameController.getGameView().window.getMenu().getPlayButton().getBounds().contains(x,y)){
@@ -72,7 +72,10 @@ public class Mouse implements MouseListener, MouseMotionListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         if(GameStates.gameStates == GameStates.MENU){
-            if(buttonClicked(e.getX(),e.getY())){GameStates.setGameStates(PLAYING);}
+            if(buttonClicked(e.getX(),e.getY())){
+                GameStates.setGameStates(PLAYING);
+                gameController.initGameLevel(0);
+            }
         }
         if(e.getButton() == MouseEvent.BUTTON1 && GameStates.gameStates == PLAYING){getTiles(e.getY()/32-1,e.getX()/32);}
     }

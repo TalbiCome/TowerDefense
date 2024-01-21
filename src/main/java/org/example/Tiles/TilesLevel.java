@@ -16,7 +16,7 @@ public class TilesLevel {
         path = new ArrayList<>();
     }
 
-    public int[][] test(){
+    public int[][] level(){
         return Game.getInstance().getLevel().map;
     }
 

@@ -7,8 +7,8 @@ public class Main {
     public static boolean mainGameLoop(GameController gameController,int level)
     {
         System.out.println("loading level " + level);
-        gameController.initGameLevel(1);
-        while (!gameController.game.didPlayerLost() || !gameController.game.areAllEnemyDead())
+        gameController.initGameLevel(level);
+        while (!gameController.game.didPlayerLost() && !gameController.game.areAllEnemyDead())
         {
             try {
                 TimeUnit.MICROSECONDS.sleep(10000);
@@ -32,13 +32,29 @@ public class Main {
         GameController gameController = new GameController();
         boolean gameResult;
 
+        int levelNum = 0;
+        int maxLevelNum = 1;
         gameController.startWindow();
-        gameResult = mainGameLoop(gameController, 1);
-
-        if(gameResult)
+        while (levelNum <= maxLevelNum)
         {
-            deathScreen();
+            gameResult = mainGameLoop(gameController, levelNum);
+
+            if(gameResult)
+            {
+                deathScreen();
+                break;
+            }
+            else
+            {
+                System.out.println("you won");
+                levelNum++;
+            }
         }
+
+        System.out.println("gg you finished the game");
+        System.exit(0);
+
+
 
     }
 

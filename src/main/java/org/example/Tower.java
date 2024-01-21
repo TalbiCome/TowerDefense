@@ -5,7 +5,7 @@ package org.example;
  */
 public class Tower extends Elements{
     /** Time between shots*/
-    int reloadTime;
+    int reloadTime = 100;
     /** Time left until next shot is available*/
     int reloadTimer;
 
@@ -21,7 +21,6 @@ public class Tower extends Elements{
     public Tower(Pos pos)
     {
         position = new Pos(pos);
-        reloadTime = 2;
         reloadTimer = 0;
         damage = 1;
     }

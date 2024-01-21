@@ -27,6 +27,7 @@ public class Playing extends GameScenes implements Scenes {
         drawTower(g);
         drawEnemy(g);
         drawBaseHp(g);
+        drawGold(g);
     }
 
     @Override
@@ -86,7 +87,7 @@ public class Playing extends GameScenes implements Scenes {
             tower++){
             Pos pos = gameController.getGame().getActiveTowers().get(tower).getPos();
             g.setColor(Color.MAGENTA);
-            g.fillRect(pos.getX(), pos.getY(), 32,32 );
+            g.fillRect(pos.getX(), pos.getY(), 24,24 );
 
         }
     }
@@ -96,10 +97,28 @@ public class Playing extends GameScenes implements Scenes {
      * @param g
      */
     private void drawEnemy(Graphics g){
-        for(Enemy enemy:gameController.getGame().getActiveEnemys()){
-            g.setColor(Color.RED);
-            g.fillRect(enemy.getPosition().getX(), enemy.getPosition().getY(), 16,16 );
+        for(Enemy enemy:gameController.getGame().getActiveEnemys()) {
+            typeOfEnemy(enemy);
+
+            g.setColor(typeOfEnemy(enemy));
+            g.fillRect(enemy.getPosition().getX(), enemy.getPosition().getY(), 16, 16);
+
+            g.setColor(Color.gray);
+            g.drawRect(enemy.getPosition().getX(), enemy.getPosition().getY(), 16, 5);
+            g.setColor(Color.GREEN);
+            g.fillRect(enemy.getPosition().getX(), enemy.getPosition().getY() - 10, enemy.getHP() * 4, 5);
         }
+
+    }
+
+    private Color typeOfEnemy(Enemy enemy){
+        if(enemy.getClass() == org.example.NormalEnemy.class){
+            return Color.CYAN;
+        }
+        if(enemy.getClass() == org.example.FastEnemy.class){
+            return Color.YELLOW;
+        }
+        else{return Color.RED;}
     }
 
     private void drawBaseHp(Graphics g){
@@ -109,10 +128,9 @@ public class Playing extends GameScenes implements Scenes {
         g.fillRect(0,0,gameController.getGame().getHeadQuarterHP()*10,20);
     }
 
-    /*
+
     private void drawGold(Graphics g){
-        gameController.getGame().getMoney();
+        g.drawString(String.valueOf(gameController.getGame().getMoney()),600 ,25);
     }
-     */
 
 }

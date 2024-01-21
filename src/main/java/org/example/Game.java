@@ -211,4 +211,8 @@ public class Game {
     public int getHeadQuarterHP(){
         return headQuarterHP;
     }
+
+    public int getMoney(){
+        return money;
+    }
 }

@@ -123,4 +123,8 @@ public abstract class Enemy extends Elements {
             moveToNextPos();
         }
     }
+
+    public int getHP() {
+        return HP;
+    }
 }

@@ -13,7 +13,13 @@ import static org.example.Scenes.GameStates.PLAYING;
 
 public class Mouse implements MouseListener, MouseMotionListener {
 
+    /**
+     * TilesManager to access the grid
+     */
     private TilesManager TManager;
+    /**
+     * GameController to communicate new changes when clicked
+     */
     private GameController gameController;
 
     /**
@@ -68,12 +74,18 @@ public class Mouse implements MouseListener, MouseMotionListener {
         }
         return false;
     }
+
+    /**
+     * When we clicked with the mouse anywhere on the window we launch a function
+     * Here we can switch the GameStates depending on where we clicked
+     * @param e the event to be processed
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
         if(GameStates.gameStates == GameStates.MENU){
             if(buttonClicked(e.getX(),e.getY())){
                 GameStates.setGameStates(PLAYING);
-                gameController.initGameLevel(1);
+                //gameController.initGameLevel(0);
             }
         }
         if(e.getButton() == MouseEvent.BUTTON1 && GameStates.gameStates == PLAYING){getTiles(e.getY()/32-1,e.getX()/32);}

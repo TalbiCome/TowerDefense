@@ -4,7 +4,16 @@ import java.util.ArrayList;
 
 public class TilesManager {
 
+
+    /**
+     * The ArrayList of Tile we use to make our grid
+     */
     public ArrayList <ArrayList <Tiles>> grid = new ArrayList<>();
+
+    /**
+     * Constructor of the TIlesManager Class
+     * create the grid and set for each Tile its neighbours
+     */
     public TilesManager(){
         for(int x=0; x < 20; x++){
             ArrayList<Tiles> temporaryList = new ArrayList<>();
@@ -21,6 +30,13 @@ public class TilesManager {
         }
 
     }
+
+    /**
+     * Set the neighbours of a tile
+     * @param i position in the column in the grid
+     * @param j position in the row in the grid
+     * @return
+     */
     private ArrayList<Tiles> setNeighbours(int i, int j){
         ArrayList<Tiles> neighbour = new ArrayList<>();
         if(i > 0 && j > 0){neighbour.add(grid.get(i-1).get(j-1));}

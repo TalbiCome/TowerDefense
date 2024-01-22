@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.Scenes.GameStates;
+
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +12,7 @@ public class Main {
         gameController.initGameLevel(level);
         while (!gameController.game.didPlayerLost() && !gameController.game.areAllEnemyDead())
         {
+
             try {
                 TimeUnit.MICROSECONDS.sleep(10000);
             } catch (InterruptedException e) {
@@ -21,6 +24,14 @@ public class Main {
         }
 
         return gameController.game.didPlayerLost();
+    }
+
+    public static boolean waitGameLoop(GameController gameController,int level){
+        if(GameStates.gameStates == GameStates.MENU) {
+            gameController.initGameLevel(level);
+            return true;
+        }
+        return false;
     }
 
     public static void deathScreen()
@@ -35,19 +46,29 @@ public class Main {
         int levelNum = 0;
         int maxLevelNum = 1;
         gameController.startWindow();
+
         while (levelNum <= maxLevelNum)
         {
-            gameResult = mainGameLoop(gameController, levelNum);
+            if(waitGameLoop(gameController,levelNum)){
+                System.out.println("Waiting");
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
 
-            if(gameResult)
-            {
-                deathScreen();
-                break;
             }
-            else
-            {
-                System.out.println("you won");
-                levelNum++;
+            else {
+
+                gameResult = mainGameLoop(gameController, levelNum);
+
+                if (gameResult) {
+                    deathScreen();
+                    break;
+                } else {
+                    System.out.println("you won");
+                    levelNum++;
+                }
             }
         }
 

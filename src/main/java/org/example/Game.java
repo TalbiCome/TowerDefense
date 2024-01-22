@@ -78,7 +78,6 @@ public class Game {
     public void loadLevel(int levelNum)
     {
         level = levelDirector.createLevel(builder, levelNum);
-
         /*
         for (int encodedEnemy: level.encodedEnemiesList) {
             enemiesQueue.add(elementsFactory.createEnemy(encodedEnemy, level.path));

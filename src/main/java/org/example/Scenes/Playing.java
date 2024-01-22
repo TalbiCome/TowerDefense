@@ -11,8 +11,19 @@ import java.util.ArrayList;
 
 public class Playing extends GameScenes implements Scenes {
 
+    /**
+     * The Window use by the application
+     */
     private Window window;
+    /**
+     * The GameController we use to communicate our changes
+     */
     private GameController gameController;
+
+    /**
+     * Constructor of Playing Class
+     * @param window is initialised in the class
+     */
     public Playing(Window window){
         super(window);
         this.window = window;
@@ -32,6 +43,10 @@ public class Playing extends GameScenes implements Scenes {
         drawTimer(g);
     }
 
+    /**
+     * Setter of the gameController
+     * @param gameController
+     */
     @Override
     public void setGameController(GameController gameController) {
         this.gameController = gameController;
@@ -61,7 +76,7 @@ public class Playing extends GameScenes implements Scenes {
     }
 
     /**
-     * Draw the map on the screen
+     * Draw the map on the screen depending on the grid states
      * @param g
      */
     private void drawMap(Graphics g){
@@ -112,6 +127,12 @@ public class Playing extends GameScenes implements Scenes {
         }
     }
 
+    /**
+     * Give the types of the enemy with his class and return the color we want
+     * for that type of enemy
+     * @param enemy is an enemy active on the screen
+     * @return a color depending on the type of enemy
+     */
     private Color typeOfEnemy(Enemy enemy){
         if(enemy.getClass() == org.example.NormalEnemy.class){
             return Color.CYAN;
@@ -122,6 +143,10 @@ public class Playing extends GameScenes implements Scenes {
         else{return Color.RED;}
     }
 
+    /**
+     * Draw the HP barre on the window
+     * @param g
+     */
     private void drawBaseHp(Graphics g){
         g.setColor(Color.gray);
         g.drawRect(0,0,300,20);
@@ -130,10 +155,18 @@ public class Playing extends GameScenes implements Scenes {
     }
 
 
+    /**
+     * Draw the number of gold possess by the player on the window
+     * @param g
+     */
     private void drawGold(Graphics g){
         g.drawString(String.valueOf("Gold :" + gameController.getGame().getMoney()),0 ,50);
     }
 
+    /**
+     * Draw the timer on the window to know how much time has pass from the start of the level
+     * @param g
+     */
     private void drawTimer(Graphics g){
         g.drawString("Timer : " + gameController.getGameView().window.timer + ".s", 0,75);
     }

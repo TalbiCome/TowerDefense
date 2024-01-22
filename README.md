@@ -3,7 +3,7 @@
 install java and maven<br>
 java version in use is 17<br>
 
-when at project root: C:\...\TowerDefense
+when at project root: C:\...\TowerDefense<br>
 use "mvn compile" to download all dependencies<br>
 use "mvn test" to launch tests<br>
 use "mvn package" to generate the executable jar<br>

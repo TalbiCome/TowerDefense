@@ -48,27 +48,36 @@ public class Main {
         int levelNum = 0;
         int maxLevelNum = 10;
         gameController.startWindow();
-        while (levelNum <= maxLevelNum )
-        {
-            File f = new File("src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_"+ levelNum +  ".txt");
-            if(f.exists() && f.isFile())
-            {
-                gameResult = mainGameLoop(gameController, levelNum);
-                if(gameResult)
-                {
-                    deathScreen();
-                    break;
+        while (levelNum <= maxLevelNum ) {
+            File f = new File("src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_" + levelNum + ".txt");
+            if (f.exists() && f.isFile()) {
+
+                if(waitGameLoop(gameController,levelNum)){
+                    System.out.println("Waiting");
+                    try {
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+
                 }
-                else
-                {
-                    System.out.println("you won");
-                    levelNum++;
+                else {
+
+                    gameResult = mainGameLoop(gameController, levelNum);
+                    if (gameResult) {
+                        deathScreen();
+                        break;
+                    } else {
+                        System.out.println("you won");
+                        levelNum++;
+                    }
                 }
             }
             else
             {
                 break;
             }
+
         }
 
         System.out.println("gg you finished the game");

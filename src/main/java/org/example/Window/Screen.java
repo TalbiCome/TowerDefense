@@ -39,7 +39,6 @@ public class Screen extends JPanel {
      * getter of the TilesManager
      * @return TManager
      */
-
     public TilesManager getTManager() {
         return TManager;
     }

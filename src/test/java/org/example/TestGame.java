@@ -10,6 +10,7 @@ public class TestGame {
         Game game = Game.getInstance();
         game.resetLevel();
         game.loadLevel(0);
+        game.addEnemy(0);
         return game;
     }
     @Test
@@ -26,8 +27,7 @@ public class TestGame {
     {
         Game game = prepareTest();
         game.spawnTower(new Pos(0, 0));
-
-        for(int i = 0 ; i < 100; i++)
+        for(int i = 0 ; i < 10000; i++)
         {
             game.spawnNextEnemy();
             game.updateActiveEnemies();
@@ -45,7 +45,16 @@ public class TestGame {
         Game game = prepareTest();
         game.headQuarterHP = 4;
 
-        for(int i = 0 ; i < 110; i++)
+        //needed to have enough enemies
+        game.loadLevel(0);
+        game.addEnemy(0);
+        game.loadLevel(0);
+        game.addEnemy(0);
+        game.loadLevel(0);
+        game.addEnemy(0);
+        game.loadLevel(0);
+
+        for(int i = 0 ; i < 1100; i++)
         {
             game.spawnNextEnemy();
             game.updateActiveEnemies();

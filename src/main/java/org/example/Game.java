@@ -84,6 +84,7 @@ public class Game {
         }
         */
         headQuarterHP = 30;
+        money += Tower.towerCost; // pour avoir de quoi placer au moin une tour si plus d'argent après un niveau
     }
 
     public void addEnemy(int levelnum){

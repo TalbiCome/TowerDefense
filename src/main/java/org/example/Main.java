@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.LevelBuilder.FileReading;
+
+import java.io.File;
 import org.example.Scenes.GameStates;
 
 import java.sql.Time;
@@ -12,7 +15,6 @@ public class Main {
         gameController.initGameLevel(level);
         while (!gameController.game.didPlayerLost() && !gameController.game.areAllEnemyDead())
         {
-
             try {
                 TimeUnit.MICROSECONDS.sleep(10000);
             } catch (InterruptedException e) {
@@ -44,31 +46,28 @@ public class Main {
         boolean gameResult;
 
         int levelNum = 0;
-        int maxLevelNum = 1;
+        int maxLevelNum = 10;
         gameController.startWindow();
-
-        while (levelNum <= maxLevelNum)
+        while (levelNum <= maxLevelNum )
         {
-            if(waitGameLoop(gameController,levelNum)){
-                System.out.println("Waiting");
-                try {
-                    TimeUnit.SECONDS.sleep(1);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-
-            }
-            else {
-
+            File f = new File("src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_"+ levelNum +  ".txt");
+            if(f.exists() && f.isFile())
+            {
                 gameResult = mainGameLoop(gameController, levelNum);
-
-                if (gameResult) {
+                if(gameResult)
+                {
                     deathScreen();
                     break;
-                } else {
+                }
+                else
+                {
                     System.out.println("you won");
                     levelNum++;
                 }
+            }
+            else
+            {
+                break;
             }
         }
 

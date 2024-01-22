@@ -8,14 +8,14 @@ public class TestTower {
     {
         Tower t1 = new Tower(new Pos(0, 1));
         Tower t2 = new Tower(new Pos(0, 2));
-        Pos[] posArray = {new Pos(0, 0), new Pos(20, 0)};
+        Pos[] posArray = {new Pos(0, 0), new Pos(200, 0)};
         Enemy enemy = new SlowEnemy(posArray, new WalkingStrategy() );
 
         t1.assignNewTarget(enemy);
         t2.assignNewTarget(enemy);
 
         int deathTime = -1;
-        for(int i = 0; i < 20; i++)
+        for(int i = 0; i < 1000; i++)
         {
             enemy.updateStatus();
             if(enemy.isDead && deathTime == -1)

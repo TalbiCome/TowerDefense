@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.LevelBuilder.FileReading;
+
+import java.io.File;
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
@@ -29,25 +32,33 @@ public class Main {
     }
     public static void main(String[] args)
     {
+
         GameController gameController = new GameController();
         boolean gameResult;
 
         int levelNum = 0;
-        int maxLevelNum = 1;
+        int maxLevelNum = 10;
         gameController.startWindow();
-        while (levelNum <= maxLevelNum)
+        while (levelNum <= maxLevelNum )
         {
-            gameResult = mainGameLoop(gameController, levelNum);
-
-            if(gameResult)
+            File f = new File("src/main/java/org/example/LevelBuilder/LevelFiles/enemyList_"+ levelNum +  ".txt");
+            if(f.exists() && f.isFile())
             {
-                deathScreen();
-                break;
+                gameResult = mainGameLoop(gameController, levelNum);
+                if(gameResult)
+                {
+                    deathScreen();
+                    break;
+                }
+                else
+                {
+                    System.out.println("you won");
+                    levelNum++;
+                }
             }
             else
             {
-                System.out.println("you won");
-                levelNum++;
+                break;
             }
         }
 
